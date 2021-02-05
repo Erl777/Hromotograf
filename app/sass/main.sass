@@ -19,7 +19,8 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: $default-font
+	height: auto
+	font-family: 'GT Eesti Pro Text', sans-serif
 	overflow-x: hidden
 
 .img-responsive
@@ -32,4 +33,503 @@ body
 
 // Стили тут пишите
 
+.container
+	&:before, &:after
+		content: unset
+		display: none
 
+p
+	margin: 0
+
+@mixin fontData($size, $weight, $lineHeight: normal)
+	font-size: $size
+	font-weight: $weight
+	@if $lineHeight != normal
+		line-height: $lineHeight
+
+@mixin linkHover
+	transition: .3s ease-in-out
+	&:hover
+		text-decoration: none
+		color: $blue
+
+.header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 40px
+	.logo
+		max-width: 170px
+		max-height: 50px
+	.nav
+		width: 24.3%
+		display: flex
+		justify-content: space-between
+		&__link
+			color: #454545
+			@include fontData(15px, 400)
+			@include linkHover
+	&-vertical
+		flex-direction: column
+
+
+.back-call
+	width: 224px
+	height: 47px
+	display: flex
+	align-items: center
+	box-shadow: -4px 7px 24px rgba(112, 178, 247, 0.17)
+	border-radius: 23px
+	background-color: #ffffff
+	padding: 5px
+	&:hover
+		text-decoration: none
+	&__number
+		color: #000
+		@include fontData(14px, 700)
+		@include linkHover
+	&__text
+		display: block
+		color: #a6a5a5
+		@include fontData(12px, 400, 12px)
+		text-decoration: underline
+
+.geolocation
+	position: relative
+	width: 232px
+	height: 37px
+	display: flex
+	align-items: center
+	&__description
+		color: #000
+		@include fontData(14px, 700)
+		line-height: 18px
+	&__link
+		position: absolute
+		left: calc( 37px + 15px )
+		bottom: -8px
+		transform: translateY(100%)
+		color: #a6a5a5
+		@include fontData(12px, 400)
+		text-decoration: underline
+		@include linkHover
+
+
+.circle-blue
+	width: 37px
+	height: 37px
+	min-width: 37px
+	min-height: 37px
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-right: 15px
+	border-radius: 50%
+	background-color: #512da8
+	background-image: linear-gradient(to top, #3b94f3 0%, #8ac2fc 100%), linear-gradient(36deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.16) 47%, rgba(255, 255, 255, 0.17) 50%, rgba(255, 255, 255, 0) 100%)
+
+.breadcrumbs
+	display: flex
+	align-items: center
+	margin: 0 auto 50px auto
+	padding: 0 15px 0
+	height: 15px
+	&__item
+		color: #454545
+		@include fontData(15px, 300)
+		list-style-type: none
+		&:not(:last-child):after
+			content: '-'
+			margin: 0 5px 0 2px
+
+.main-title
+	color: #212327
+	@include fontData(37px, 400, 34px)
+	margin: 0 auto 50px auto
+	text-align: left
+
+.small-container
+	width: 100%
+	max-width: 850px
+
+.square-blue
+	width: 77px
+	height: 80px
+	background-color: #e3f0fd
+
+.email
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 167px
+	height: 44px
+	min-width: 167px
+	min-height: 44px
+	box-shadow: -6px 13px 24px rgba(112, 178, 247, 0.28)
+	border-radius: 21px
+	background-color: #ffffff
+	background-image: linear-gradient(to top, #3b94f3 0%, #8ac2fc 100%), linear-gradient(36deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.11) 47%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 100%)
+	color: #fff
+	@include fontData(16px, 400, 16px)
+	border: none
+	transition: .3s ease-in-out
+	&:hover
+		cursor: pointer
+		text-decoration: none
+
+
+.general-information
+	display: flex
+	&__description
+		width: 213px
+		margin-right: 50px
+		>p
+			margin: 0
+			color: #454545
+			word-wrap: break-word
+			line-height: 21px
+			@include fontData(16px, 300)
+			&:not(:last-child)
+				margin: 0 0 20px 0
+	.indicators
+		display: flex
+		margin: 0 80px 70px 0
+		justify-content: space-around
+		.indicator
+			position: relative
+			display: inline-flex
+			align-items: center
+			&__description
+				@include fontData(20px, 700, 20px)
+				margin-left: 15px
+			&__big-number
+				position: relative
+				@include fontData(44px, 800, 32px)
+				color: #212327
+				z-index: 2
+		.square-blue
+			position: absolute
+			left: -10px
+			display: flex
+			align-items: center
+			width: 77px
+			height: 80px
+			background-color: #e3f0fd
+			padding: 24px 0 24px 10px
+			z-index: 1
+	.photo-container
+		padding: 30px 30px 0 50px
+		margin: 0 40px 50px 0
+		box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
+		background-color: #ffffff
+		.staff
+			max-width: 100%
+
+	.advantages
+		display: flex
+		flex-wrap: wrap
+		margin-left: 65px
+		margin-bottom: 90px
+		.advantage
+			position: relative
+
+			&:before
+				position: absolute
+				top: -15px
+				left: -30px
+				content: ''
+				display: block
+				width: 3px
+				height: 60px
+				background-color: #6baef3
+			&__title
+				@include fontData(20px, 700, 18px)
+				color: #282828
+				margin-bottom: 30px
+			&__description
+				color: #212327
+				@include fontData(14px, 400, 16px)
+			&:nth-child(1)
+				max-width: 560px
+			&:nth-child(2)
+				max-width: 268px
+				margin: 60px 95px 0 0
+			&:nth-child(3)
+				max-width: 422px
+				margin-top: 60px
+
+
+.director
+	display: flex
+	margin-bottom: 55px
+	&__sidebar
+		position: relative
+		margin: 100px 93px 0 0
+		.title
+			position: relative
+			color: #212327
+			@include fontData(37px, 400, 38px)
+			margin-bottom: 30px
+			max-width: 180px
+			z-index: 2
+		.company-name
+			color: #454545
+			@include fontData(15px, 700, 16px)
+			&:after
+				display: block
+				content: url("../img/arrow_right.svg")
+				margin-top: 30px
+		.square-blue
+			position: absolute
+			top: -28px
+			left: -21px
+			z-index: 1
+	&__info
+		position: relative
+		display: flex
+		box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
+		background-color: #ffffff
+		padding: 18px 50px 25px 20px
+		.logo
+			margin-right: 39px
+		.description-container
+			.content
+				color: #474747
+				@include fontData(14px, 300)
+				margin-bottom: 20px
+		.feedback
+			display: flex
+			align-items: center
+			&__description
+				margin-left: 24px
+				color: #454545
+				@include fontData(13px, 700, 14px)
+				max-width: 190px
+		.square-blue
+			position: absolute
+			right: -18px
+			bottom: -20px
+			z-index: -1
+
+
+.sales-department
+	display: flex
+	margin-bottom: 70px
+	&__sidebar
+		margin: 120px 100px 0 0
+		.title
+			position: relative
+			color: #212327
+			@include fontData(37px, 400, 38px)
+			margin-bottom: 66px
+			max-width: 128px
+		.hint
+			color: #454545
+			@include fontData(15px, 700, 16px)
+			&:after
+				display: block
+				content: url("../img/arrow_right.svg")
+				margin-top: 30px
+	&__container
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: repeat(2, 1fr)
+		grid-gap: 10px
+		row-gap: 12px
+
+	.card
+		padding: 17px 20px 30px
+		box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
+		background-color: #ffffff
+		min-height: 450px
+		&:hover
+			text-decoration: none
+		&__logo
+			max-width: 100%
+			margin-bottom: 23px
+		&__position
+			color: #474747
+			@include fontData(16px, 300, 14px)
+			margin-bottom: 18px
+			text-align: center
+		&__identity
+			color: #474747
+			@include fontData(22px, 400, 20px)
+			margin-bottom: 30px
+			text-align: center
+		.email
+			margin: 0 auto
+		&:last-child
+			background-color: transparent
+			box-shadow: none
+			padding: 100px 0 0 55px
+			color: #000
+		&__title
+			color: #212327
+			@include fontData(44px, 400, 42px)
+			margin-bottom: 32px
+		&__subtitle
+			color: #212327
+			@include fontData(20px, 700, 18px)
+			margin-bottom: 74px
+		&__link-content
+			color: #454545
+			@include fontData(15px, 700, 16px)
+			&:after
+				display: block
+				content: url("../img/arrow_right.svg")
+				margin-top: 30px
+
+
+.services
+	display: flex
+	margin-bottom: 65px
+	&__sidebar
+		margin: 120px 100px 0 0
+		.title
+			position: relative
+			color: #212327
+			@include fontData(37px, 400, 38px)
+			margin-bottom: 60px
+			max-width: 128px
+		.hint
+			color: #454545
+			@include fontData(16px, 300, 16px)
+			max-width: 190px
+			margin-bottom: 24px
+		.name
+			color: #454545
+			@include fontData(16px, 400, 16px)
+
+	&__container
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: repeat(3, 1fr)
+		grid-gap: 10px
+		row-gap: 12px
+
+	.card
+		padding: 17px 20px 30px
+		box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
+		background-color: #ffffff
+		min-height: 450px
+		&:hover
+			text-decoration: none
+		&__logo
+			max-width: 100%
+			margin-bottom: 23px
+		&__position
+			color: #474747
+			@include fontData(16px, 300, 14px)
+			margin-bottom: 18px
+			text-align: center
+		&__identity
+			color: #474747
+			@include fontData(22px, 400, 20px)
+			margin-bottom: 30px
+			text-align: center
+		.email
+			margin: 0 auto
+		&__title
+			color: #212327
+			@include fontData(44px, 400, 42px)
+			margin-bottom: 32px
+		&__subtitle
+			color: #212327
+			@include fontData(20px, 700, 18px)
+			margin-bottom: 74px
+		&__link-content
+			color: #454545
+			@include fontData(15px, 700, 16px)
+			&:after
+				display: block
+				content: url("../img/arrow_right.svg")
+				margin-top: 30px
+
+
+.how-to-buy
+	display: flex
+	margin-bottom: 60px
+	&__sidebar
+		position: relative
+		width: 250px
+		min-width: 250px
+		max-height: 360px
+		margin-right: 40px
+		border: 10px solid #6baef3
+		padding: 58px 20px 92px 20px
+		.title
+			max-width: 188px
+			color: #212327
+			@include fontData(23px, 400, 25px)
+			margin-bottom: 36px
+			.blue
+				color: #6baef3
+		.link
+			display: block
+			color: #454545
+			@include fontData(15px, 700, 16px)
+			max-width: 113px
+			&:hover
+				text-decoration: none
+			&:after
+				display: block
+				content: url("../img/arrow_right.svg")
+				margin-top: 24px
+		.img
+			position: absolute
+			right: 0
+			bottom: -1px
+			max-width: 164px
+			max-height: 154px
+			z-index: -1
+	&-container
+		margin-right: 138px
+		.title
+			color: #282828
+			@include fontData(20px, 700, 18px)
+			margin-bottom: 30px
+		.description
+			color: #212327
+			@include fontData(14px, 300, 19px)
+			margin-bottom: 20px
+			span
+				display: block
+				margin-top: 30px
+				font-weight: bold
+
+
+.footer
+	padding-top: 53px
+	position: relative
+	&-bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 50%
+		height: 100%
+		background-color: #212327
+		z-index: -1
+	.logo
+		margin-bottom: 32px
+	.nav
+		width: 277px
+		display: flex
+		justify-content: space-between
+		margin-bottom: 42px
+		&__link
+			color: #fff
+			@include fontData(15px, 400)
+			@include linkHover
+	.back-call
+		margin-bottom: 44px
+	.geolocation
+		flex-wrap: wrap
+		height: auto
+		&__description
+			color: #fff
+		&__link
+			position: static
+			display: block
+			transform: unset
+			padding-left: calc(37px + 15px)
