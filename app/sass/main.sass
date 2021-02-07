@@ -37,9 +37,14 @@ body
 	&:before, &:after
 		content: unset
 		display: none
+	@media (max-width: 992px)
+		width: 100%
 
 p
 	margin: 0
+
+img
+	pointer-events: none
 
 @mixin fontData($size, $weight, $lineHeight: normal)
 	font-size: $size
@@ -53,11 +58,23 @@ p
 		text-decoration: none
 		color: $blue
 
+@mixin Circe
+	font-family: 'Circe ExtraBold', sans-serif
+	font-weight: 800
+
+@mixin Montserrat
+	font-family: 'Montserrat ExtraBold', sans-serif
+	font-weight: 800
+
 .header
 	display: flex
 	align-items: center
 	justify-content: space-between
 	margin-bottom: 40px
+	@media (max-width: 992px)
+		flex-wrap: wrap
+	@media (max-width: 500px)
+		flex-direction: column
 	.logo
 		max-width: 170px
 		max-height: 50px
@@ -65,12 +82,30 @@ p
 		width: 24.3%
 		display: flex
 		justify-content: space-between
+		@media (max-width: 992px)
+			width: 277px
+			min-width: 277px
+			margin: 0 10px
+		@media (max-width: 500px)
+			margin: 20px 0 0
 		&__link
 			color: #454545
 			@include fontData(15px, 400)
 			@include linkHover
 	&-vertical
 		flex-direction: column
+		@media (max-width: 768px)
+			display: flex
+			width: 100%
+			background-color: #000
+			align-items: center
+			padding-top: 20px
+	.geolocation
+		@media (max-width: 930px)
+			margin-top: 20px
+	.back-call
+		@media (max-width: 720px)
+			margin-top: 20px
 
 
 .back-call
@@ -114,7 +149,6 @@ p
 		text-decoration: underline
 		@include linkHover
 
-
 .circle-blue
 	width: 37px
 	height: 37px
@@ -134,19 +168,29 @@ p
 	margin: 0 auto 50px auto
 	padding: 0 15px 0
 	height: 15px
+	@media (max-width: 500px)
+		justify-content: center
 	&__item
-		color: #454545
-		@include fontData(15px, 300)
 		list-style-type: none
 		&:not(:last-child):after
 			content: '-'
 			margin: 0 5px 0 2px
+	&__link
+		color: #454545
+		@include fontData(15px, 300)
+		@include linkHover
+
 
 .main-title
 	color: #212327
-	@include fontData(37px, 400, 34px)
+	@include fontData(37px, 800, 34px)
 	margin: 0 auto 50px auto
 	text-align: left
+	@include Circe
+	@media (max-width: 768px)
+		text-align: center
+		@include fontData(30px, 400, 30px)
+
 
 .small-container
 	width: 100%
@@ -177,12 +221,19 @@ p
 		cursor: pointer
 		text-decoration: none
 
-
 .general-information
 	display: flex
+	@media (max-width: 850px)
+		flex-direction: column-reverse
 	&__description
 		width: 213px
 		margin-right: 50px
+		@media (max-width: 992px)
+			margin-right: 30px
+		@media (max-width: 850px)
+			width: 100%
+			max-width: 100%
+			margin-right: 0
 		>p
 			margin: 0
 			color: #454545
@@ -195,6 +246,11 @@ p
 		display: flex
 		margin: 0 80px 70px 0
 		justify-content: space-around
+		@media (max-width: 992px)
+			margin: 0 0 35px 0
+		@media (max-width: 600px)
+			flex-direction: column
+			align-items: center
 		.indicator
 			position: relative
 			display: inline-flex
@@ -207,6 +263,10 @@ p
 				@include fontData(44px, 800, 32px)
 				color: #212327
 				z-index: 2
+				@include Montserrat
+			&:first-child
+				@media (max-width: 600px)
+					margin-bottom: 50px
 		.square-blue
 			position: absolute
 			left: -10px
@@ -222,6 +282,9 @@ p
 		margin: 0 40px 50px 0
 		box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
 		background-color: #ffffff
+		@media (max-width: 850px)
+			margin: 0 0 50px 0
+			padding: 5px 5px 0 5px
 		.staff
 			max-width: 100%
 
@@ -230,9 +293,10 @@ p
 		flex-wrap: wrap
 		margin-left: 65px
 		margin-bottom: 90px
+		@media (max-width: 850px)
+			margin: 0 0 30px 30px
 		.advantage
 			position: relative
-
 			&:before
 				position: absolute
 				top: -15px
@@ -251,20 +315,35 @@ p
 				@include fontData(14px, 400, 16px)
 			&:nth-child(1)
 				max-width: 560px
+				@media (max-width: 850px)
+					max-width: 100%
 			&:nth-child(2)
 				max-width: 268px
 				margin: 60px 95px 0 0
+				@media (max-width: 850px)
+					max-width: 100%
+					margin: 30px 0 0 0
 			&:nth-child(3)
 				max-width: 422px
 				margin-top: 60px
+				@media (max-width: 850px)
+					max-width: 100%
+					margin: 30px 0 0 0
 
 
 .director
 	display: flex
 	margin-bottom: 55px
+	@media (max-width: 992px)
+		flex-direction: column
 	&__sidebar
 		position: relative
 		margin: 100px 93px 0 0
+		@media (max-width: 992px)
+			margin: 50px 0 0 0
+			display: flex
+			flex-direction: column
+			align-items: center
 		.title
 			position: relative
 			color: #212327
@@ -272,26 +351,52 @@ p
 			margin-bottom: 30px
 			max-width: 180px
 			z-index: 2
+			@include Circe
+			@media (max-width: 992px)
+				max-width: 100%
+				margin-bottom: 15px
+			@media (max-width: 500px)
+				text-align: center
 		.company-name
 			color: #454545
 			@include fontData(15px, 700, 16px)
+			@media (max-width: 992px)
+				text-align: center
+				margin-bottom: 15px
 			&:after
 				display: block
 				content: url("../img/arrow_right.svg")
 				margin-top: 30px
+				@media (max-width: 992px)
+					display: none
 		.square-blue
 			position: absolute
 			top: -28px
 			left: -21px
 			z-index: 1
+			@media (max-width: 992px)
+				display: none
 	&__info
 		position: relative
 		display: flex
 		box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
 		background-color: #ffffff
 		padding: 18px 50px 25px 20px
+		@media (max-width: 992px)
+			max-width: 100%
+			padding: 10px
+		@media (max-width: 500px)
+			flex-direction: column
+			align-items: center
 		.logo
 			margin-right: 39px
+			max-height: 355px
+			@media (max-width: 768px)
+				margin-right: 20px
+				width: 120px
+				height: 180px
+			@media (max-width: 500px)
+				margin: 0 0 30px 0
 		.description-container
 			.content
 				color: #474747
@@ -300,53 +405,85 @@ p
 		.feedback
 			display: flex
 			align-items: center
+			@media (max-width: 500px)
+				flex-direction: column
+				align-items: center
 			&__description
 				margin-left: 24px
 				color: #454545
 				@include fontData(13px, 700, 14px)
 				max-width: 190px
+				@media (max-width: 500px)
+					margin: 20px 0 0 0
 		.square-blue
 			position: absolute
 			right: -18px
 			bottom: -20px
 			z-index: -1
+			@media (max-width: 992px)
+				display: none
 
 
 .sales-department
 	display: flex
 	margin-bottom: 70px
+	@media (max-width: 768px)
+		flex-direction: column
 	&__sidebar
 		margin: 120px 100px 0 0
+		@media (max-width: 992px)
+			margin: 60px 30px 0 0
+		@media (max-width: 768px)
+			margin: 0
 		.title
 			position: relative
 			color: #212327
 			@include fontData(37px, 400, 38px)
 			margin-bottom: 66px
 			max-width: 128px
+			@include Circe
+			@media (max-width: 768px)
+				max-width: 100%
+				margin-bottom: 20px
+				text-align: center
 		.hint
 			color: #454545
 			@include fontData(15px, 700, 16px)
+			@media (max-width: 768px)
+				text-align: center
+				margin-bottom: 15px
 			&:after
 				display: block
 				content: url("../img/arrow_right.svg")
 				margin-top: 30px
+				@media (max-width: 768px)
+					display: inline-block
+					margin: 0
+					transform: rotate(90deg)
 	&__container
 		display: grid
 		grid-template-columns: repeat(3, 1fr)
 		grid-template-rows: repeat(2, 1fr)
 		grid-gap: 10px
 		row-gap: 12px
+		@media (max-width: 900px)
+			grid-template-columns: repeat(2, 1fr)
+			grid-template-rows: repeat(3, 1fr)
+		@media (max-width: 475px)
+			grid-template-columns: repeat(1, 1fr)
+			grid-template-rows: auto
 
 	.card
 		padding: 17px 20px 30px
 		box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
 		background-color: #ffffff
-		min-height: 450px
 		&:hover
 			text-decoration: none
 		&__logo
 			max-width: 100%
-			margin-bottom: 23px
+			//margin-bottom: 23px
+			display: block
+			margin: 0 auto 20px auto
 		&__position
 			color: #474747
 			@include fontData(16px, 300, 14px)
@@ -364,14 +501,21 @@ p
 			box-shadow: none
 			padding: 100px 0 0 55px
 			color: #000
+			@media (max-width: 992px)
+				padding: 10px 0 0 10px
+			@media (max-width: 475px)
+				text-align: center
 		&__title
 			color: #212327
 			@include fontData(44px, 400, 42px)
 			margin-bottom: 32px
+			@include Montserrat
 		&__subtitle
 			color: #212327
 			@include fontData(20px, 700, 18px)
 			margin-bottom: 74px
+			@media (max-width: 475px)
+				margin-bottom: 30px
 		&__link-content
 			color: #454545
 			@include fontData(15px, 700, 16px)
@@ -379,24 +523,40 @@ p
 				display: block
 				content: url("../img/arrow_right.svg")
 				margin-top: 30px
+				@media (max-width: 475px)
+					margin-top: 10px
 
 
 .services
 	display: flex
 	margin-bottom: 65px
+	@media (max-width: 768px)
+		flex-direction: column
+		align-items: center
 	&__sidebar
 		margin: 120px 100px 0 0
+		@media (max-width: 992px)
+			margin: 60px 30px 0 0
+		@media (max-width: 768px)
+			margin: 0
+			text-align: center
 		.title
 			position: relative
 			color: #212327
 			@include fontData(37px, 400, 38px)
 			margin-bottom: 60px
 			max-width: 128px
+			@include Circe
+			@media (max-width: 768px)
+				max-width: 100%
+				margin-bottom: 30px
 		.hint
 			color: #454545
 			@include fontData(16px, 300, 16px)
 			max-width: 190px
 			margin-bottom: 24px
+			@media (max-width: 768px)
+				max-width: 100%
 		.name
 			color: #454545
 			@include fontData(16px, 400, 16px)
@@ -407,6 +567,12 @@ p
 		grid-template-rows: repeat(3, 1fr)
 		grid-gap: 10px
 		row-gap: 12px
+		@media (max-width: 900px)
+			grid-template-columns: repeat(2, 1fr)
+			grid-template-rows: auto
+		@media (max-width: 500px)
+			grid-template-columns: repeat(1, 1fr)
+			grid-template-rows: auto
 
 	.card
 		padding: 17px 20px 30px
@@ -417,7 +583,8 @@ p
 			text-decoration: none
 		&__logo
 			max-width: 100%
-			margin-bottom: 23px
+			display: block
+			margin: 0 auto 20px auto
 		&__position
 			color: #474747
 			@include fontData(16px, 300, 14px)
@@ -450,6 +617,9 @@ p
 .how-to-buy
 	display: flex
 	margin-bottom: 60px
+	@media (max-width: 600px)
+		flex-direction: column
+		align-items: center
 	&__sidebar
 		position: relative
 		width: 250px
@@ -458,6 +628,8 @@ p
 		margin-right: 40px
 		border: 10px solid #6baef3
 		padding: 58px 20px 92px 20px
+		@media (max-width: 600px)
+			margin: 0 0 30px 0
 		.title
 			max-width: 188px
 			color: #212327
@@ -485,6 +657,8 @@ p
 			z-index: -1
 	&-container
 		margin-right: 138px
+		@media (max-width: 900px)
+			margin-right: 0
 		.title
 			color: #282828
 			@include fontData(20px, 700, 18px)
@@ -502,6 +676,22 @@ p
 .footer
 	padding-top: 53px
 	position: relative
+	overflow: hidden
+	@media (max-width: 768px)
+		padding-top: 0
+	&-container
+		display: flex
+		justify-content: space-between
+		@media (max-width: 768px)
+			flex-direction: column-reverse
+			align-items: center
+			padding: 0
+		.social
+			width: 121px
+			margin-bottom: 27px
+			display: flex
+			align-items: center
+			justify-content: space-between
 	&-bg
 		position: absolute
 		top: 0
@@ -510,6 +700,19 @@ p
 		height: 100%
 		background-color: #212327
 		z-index: -1
+		@media (max-width: 930px)
+			width: 40%
+		@media (max-width: 768px)
+			display: none
+	&__img
+		position: absolute
+		bottom: -374px
+		left: 50%
+		transform: translateX(-50%)
+		@media (max-width: 992px)
+			bottom: -400px
+		@media (max-width: 768px)
+			display: none
 	.logo
 		margin-bottom: 32px
 	.nav
@@ -526,6 +729,9 @@ p
 	.geolocation
 		flex-wrap: wrap
 		height: auto
+		margin-bottom: 50px
+		@media (max-width: 768px)
+			margin-bottom: 30px
 		&__description
 			color: #fff
 		&__link
@@ -533,3 +739,69 @@ p
 			display: block
 			transform: unset
 			padding-left: calc(37px + 15px)
+	.form
+		margin-top: 20px
+		@media (max-width: 768px)
+			width: 444px
+			max-width: 100%
+			margin: 0 0 20px 0
+		@media (max-width: 475px)
+			padding: 0 10px
+		&__title
+			@include fontData(32px, 400, 32px)
+			color: #212327
+			max-width: 100% // 360px
+			margin: 0 0 25px 18px
+			@include Circe
+			@media (max-width: 768px)
+				max-width: 100%
+				margin: 0 0 25px 0
+				text-align: center
+			@media (max-width: 475px)
+				@include fontData(26px, 400, 30px)
+		&__container
+			display: grid
+			grid-template-columns: repeat(2, 1fr)
+			grid-template-rows: repeat(2, 1fr)
+			grid-gap: 11px
+			row-gap: 9px
+			margin-bottom: 23px
+			@media (max-width: 475px)
+				display: flex
+				flex-direction: column
+				align-items: center
+			input
+				width: 213px
+				height: 48px
+				border-radius: 24px
+				border: 1px solid #cdcdcd
+				outline: none
+				padding-left: 28px
+				&::placeholder
+					color: #212327
+					@include fontData(13px, 400, 12px)
+		&__footer
+			display: flex
+			@media (max-width: 475px)
+				flex-direction: column
+				align-items: center
+		.agree
+			margin: 0 33px 0 28px
+			max-width: 170px
+			@include fontData(13px, 300, 21px)
+			color: #a6a5a5
+			@media (max-width: 475px)
+				margin: 0 0 20px 0
+		&__btn
+			width: 213px
+			height: 49px
+			border-radius: 24px
+			background-color: #2c3a48
+			color: #fcfcfc
+			border: none
+			outline: none
+			@include fontData(16px, 400, 16px)
+			background-image: linear-gradient(to top, #3b94f3 0%, #8ac2fc 100%), linear-gradient(36deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.11) 47%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 100%)
+			padding: 0
+			&:hover
+				cursor: pointer
