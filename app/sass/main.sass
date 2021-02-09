@@ -3,33 +3,360 @@
 @import "vars"
 
 *
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
-	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
-		box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
 
 html, body
-	height: 100%
+  height: 100%
 
 body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.65
-	font-family: $default-font
-	overflow-x: hidden
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
+  background-color: #fcfcfc
 
 .img-responsive
-	display: block
-	max-width: 100%
-	height: auto
+  display: block
+  max-width: 100%
+  height: auto
 
 .text-center
-	text-align: center
+  text-align: center
 
 // Стили тут пишите
+.container
+  max-width: 1280px
+
+  &::before
+    content: none
+
+  &::after
+    content: none
+
+/**Все услуги */
+.container__allServices
+  width: 100%
+  margin: 50px auto
+  display: flex
+  padding: 0
 
 
+.asideTitle
+  font-size: 37px
+  font-weight: 400
+  line-height: 41px
+  color: #212327
+  margin-bottom: 50px
+
+.services__asideBlock
+  width: calc(21% - 50px)
+  margin: 15px 40px 15px 10px
+
+.services__contentWrap
+  width: 79%
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+.singleArticle
+  height: 400px
+  margin: 0 5px 30px
+  width: 100%
+  display: flex
+  flex-direction: column
+  max-width: 287px
+  justify-content: space-between
+  background-color: #FFF
+  box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
+
+  button
+    width: 157px
+    margin: 0 auto 20px
+    min-height: 46px
+    box-shadow: -6px 13px 24px rgba(112, 178, 247, 0.28)
+    background: #337ab7 linear-gradient(to top, #3b94f3 0%, #8ac2fc 100%)
+    border: none
+    color: #ffffff
+    border-radius: 21px
+    outline: none
+    opacity: 1
+    transition: all ease 0.5s
+
+    &:hover
+      opacity: 0.7
+      transition: all ease 0.5s
+
+
+.articleImgWrapper
+  width: auto
+  margin: 15px 15px 10px 15px
+  min-height: 200px
+  max-height: 250px
+  overflow: hidden
+  position: relative
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+
+.articleDescription
+  width: calc(100% - 20px)
+  margin: 0 10px
+  text-align: center
+  font-size: 17px
+
+@media screen and (max-width: 1144px)
+  .services__contentWrap
+    justify-content: space-evenly
+  .services__asideBlock
+    width: calc(40% - 50px)
+  .services__contentWrap
+    width: 60%
+
+@media screen and (max-width: 1006px)
+  .container__allServices
+    flex-direction: column
+  .services__asideBlock
+    width: calc(100% - 40px)
+    margin: 0 20px
+  .services__contentWrap
+    width: calc(100% - 40px)
+    margin: 20px
+
+/** Одна Услуга */
+
+.singleService
+  display: flex
+  position: relative
+
+.singleService__WrapperImg
+  width: 30%
+  position: relative
+  left: -30px
+
+  img
+    position: absolute
+    width: 130%
+    height: auto
+
+
+.singleService__Content
+  width: 70%
+  display: flex
+  flex-direction: column
+  max-width: 780px
+  margin: 0 auto
+
+  p
+    font-size: 16px
+    font-weight: 300
+    line-height: 21px
+    color: #454545
+    margin: 12px 10px 20px
+    width: 80%
+
+    span
+      font-weight: 900
+
+.content_WrapperImg
+  display: flex
+  width: 90%
+  margin-bottom: 25px
+
+.container__singleService
+  width: 100%
+  max-width: 1280px
+  background-color: #fcfcfc
+
+.container__singleService__Title
+  font-size: 33px
+  font-weight: 900
+  line-height: 41px
+  margin: 0 0 32px
+
+.wrapperImg__single
+  position: relative
+  overflow: hidden
+  padding: 0 7px
+  width: 33.333%
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 15px
+
+.singleService__footerIcon
+  display: flex
+  justify-content: space-between
+  margin: 0 auto 20px
+  width: 94%
+
+.singleService__footerIcon__single
+  display: flex
+
+  p
+    font-size: 18px
+    font-weight: 900
+
+  span
+    display: block
+    position: relative
+    color: #212327
+    font-size: 38px
+    margin-right: 20px
+    font-weight: 900
+    z-index: 1
+
+    &::after
+      content: ""
+      position: absolute
+      display: block
+      width: 70px
+      height: 70px
+      background-color: #e3f0fd
+      z-index: -1
+      top: 0
+      left: -10px
+
+.singleService__descriptionWrapper
+  width: 100%
+  display: flex
+  justify-content: space-evenly
+
+  aside
+    width: 20%
+    position: relative
+
+    a
+      position: absolute
+      text-decoration: none
+      outline: none
+      bottom: 50px
+      font-weight: 700
+      font-size: 17px
+      color: #454545
+
+      &:hover
+        text-decoration: none
+
+  section
+    width: 80%
+    max-width: 875px
+    background-color: #ffffff
+    box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
+    display: flex
+    flex-wrap: wrap
+    list-style-type: none
+    z-index: 1
+
+    div
+      margin: 40px 50px 0
+
+.singleService__descriptionWrapper_Button
+  box-shadow: -6px 13px 24px rgba(112, 178, 247, 0.28)
+  border-radius: 22px
+  color: #ffffff
+  white-space: nowrap
+  background-image: linear-gradient(to top, #3b94f3 0%, #8ac2fc 100%), linear-gradient(36deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.11) 47%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 100%)
+  border: 1px solid #3b94f3
+  outline: none
+  padding: 9px 38px
+  margin-right: 20px
+  transition: all ease 0.5s
+  text-decoration: none
+  cursor: pointer
+  flex-shrink: 0
+  flex-grow: 1
+
+  &:not(.buttonActive):focus
+    text-decoration: none
+    outline: none
+
+  &:focus
+    outline: none
+    text-decoration: none
+
+  &:hover
+    transition: all ease 0.5s
+    opacity: 0.7
+    outline: none
+    text-decoration: none
+
+
+.buttonActive
+  background-image: none
+  color: #000000
+  background-color: #e3f0fd
+  text-decoration: none
+
+.singleService__TabSingle
+  display: none
+
+.singleService__TabSingle_show
+  display: block
+
+@media screen and (max-width: 800px)
+  .singleService__WrapperImg
+    display: none
+  .singleService__Content
+    width: 100%
+
+    p
+      width: 100%
+  .content_WrapperImg
+    width: 100%
+
+    .singleService__footerIcon
+      margin: 0 20px 20px
+  .singleService__descriptionWrapper
+    flex-direction: column
+    aside
+      width: auto
+      order: 1
+      margin: 0 auto
+      a
+        position: relative
+        bottom: 0
+        display: flex
+        align-items: center
+        margin: 0 15px
+        img
+          width: 24px
+          height: 14px
+          margin-left: 25px
+    section
+      width: 100%
+    .singleService__descriptionWrapper__tabsWrapper
+      display: flex
+      margin: 20px auto 0
+      flex-wrap: wrap
+    .singleService__descriptionWrapper_Button
+      margin: 0 20px 20px
+    .singleService__TabSingle
+      margin: 0 20px
+  .container__singleService__Title
+      font-size: 25px
+@media screen and (max-width: 580px)
+  .singleService__footerIcon
+    flex-direction: column
+
+    div
+      margin: 10px 0
+  .content_WrapperImg
+    flex-direction: column
+  .wrapperImg__single
+    max-height: 33%
+    width: auto
+    margin-bottom: 20px
