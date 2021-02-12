@@ -18,8 +18,7 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
-	font-family: $default-font
+	font-family: 'GT Eesti Pro Display', sans-serif
 	overflow-x: hidden
 
 .img-responsive
@@ -31,5 +30,183 @@ body
 	text-align: center
 
 // Стили тут пишите
+	
+.container
+	max-width: 1175px
+	
+	&::before
+		content: none
+	&::after
+		content: none
 
+	&__articles
+		width: 1175px
+		padding: 0
+
+		.title
+			color: #212327
+			font-family: 'Circe - Extra Bold'
+			font-size: 37px
+			font-weight: 400
+
+			h2
+				margin-bottom: 0
+		
+		.article
+			position: relative
+			width: calc(25% - 9px)
+			margin-top: 22px
+			margin-right: 9px
+			box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.3)
+			background-color: #ffffff
+			padding: 15px 14px 0 15px
+			height: 555px
+			background: transparent
+			z-index: 10
+
+			&:nth-child(4n)
+				margin-right: 0
+			
+			&-list 
+				display: flex
+				flex-wrap: wrap
+				width: 100%
+
+			&__title
+				color: #474747
+				font-size: 17px
+				font-weight: 500
+
+			&__content
+				color: #474747
+				font-size: 13px
+				font-weight: 300
+
+			&__date
+				font-size: 12px
+				font-weight: 300
+
+			&__read-more
+				position: absolute
+				left: 50%
+				transform: translate(-50%, 0)
+				bottom: 24px
+				height: 46px
+				display: flex
+				justify-content: center
+				align-items: center
+				padding: 16px 29px
+				box-shadow: -6px 13px 24px rgba(112, 178, 247, 0.28)
+				border-radius: 21px
+				background-color: #ffffff
+				background-image: linear-gradient(to top, #3b94f3 0%, #8ac2fc 100%), linear-gradient(36deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.11) 47%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 100%)
+
+				button
+					background: transparent
+					border: none
+					color: #fff
+					padding: 0
+
+		.pages
+			width: 25%
+
+			&__title
+				margin-top: 317px
+				margin-left: 39px
+				color: #454545;
+				font-size: 24px;
+				font-weight: 700;
+
+			&__number
+				margin-top: 29px
+				margin-left: 98px
+
+				b
+					margin-left: 25px
+					color: #212327
+					font-family: 'Montserrat', sans-serif
+					font-size: 21px
+					font-weight: 700
+
+			&__rectangle
+				position: relative
+				width: 164px;
+				height: 28px;
+				background-color: #e3f0fd;
+				margin-top: 23px
+				margin-left: -9px
+				z-index: -1
+
+
+@media screen and (max-width: 1400px)
+	.container
+		max-width: 960px
+
+		&__articles
+			
+			.article
+				width: 32%
+
+@media screen and (max-width: 1140px)
+	.container
+		max-width: 720px
+
+		&__articles
+			
+			.article
+				width: 48%
+
+				&:nth-child(4n)
+					margin-right: 9px
+
+				img
+					overflow: hidden
+
+			.pages
+				width: 48%
+				&__number
+					margin-left: 68px
+
+@media screen and (max-width: 850px)
+	.container
+		max-width: 600px
+
+		&__articles
+			
+			.article
+				width: 45%
+				height: 600px
+
+			.pages
+				width: 45%
+
+
+@media screen and (max-width: 680px)
+	.container
+		max-width: 480px
+
+		&__articles
+			
+			.article
+				width: 85%
+				height: 555px
+
+			.pages
+				width: 85%
+
+				&__title
+					margin-top: 37px
+
+@media screen and (max-width: 680px)
+	.container
+		max-width: 320px
+		
+		&__articles
+			
+			.article
+				width: 90%
+				height: 670px
+
+			
+		
 
