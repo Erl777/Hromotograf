@@ -179,6 +179,7 @@
       display: flex
       flex-direction: column
       padding: 45px 35px 41px 31px
+      margin-top: 10px
       form
         display: flex
         flex-direction: column
@@ -197,6 +198,8 @@
     &-about
       &_text
         margin-left: 0
+        margin: 0 auto
+        padding: 0 15px
       &_tabs
         display: flex
         flex-direction: column
@@ -220,15 +223,22 @@
     //overflow-x: scroll
     //overflow-y: hidden
 @media(max-width: 475px)
+  .hromot_page
+    &-about
+      &_tabs
+      &_text
+        margin-left: 0
+        margin: 0 auto
+        padding: 0 5px
   .tab
-    height: 60px
+    height: 40px
     &__container
       margin-top: 0
       p
         margin-top: 10px
   .hromot_page-about_tabs
     display: flex
-    flex-direction: row
+    flex-direction: column
   .tabs__container
     flex-direction: column
     justify-content: flex-start
