@@ -137,6 +137,92 @@ body
 				margin-left: -9px
 				z-index: -1
 
+	&__services
+
+		.services__wrapper
+			display: flex
+			justify-content: center
+			align-items: flex-start
+
+			.offer
+				width: 213px
+				margin-right: 47px
+
+				&__title
+					color: #212327
+					font-family: "Circe - Extra Bold"
+					font-size: 37px
+					font-weight: 400
+					line-height: 41px
+
+					h2
+						margin-top: 0
+
+				&__content
+					font-family: "GT Eesti Pro Display"
+					font-size: 16px
+					font-weight: 300
+					color: #454545
+					margin-top: 57px
+
+					p
+						margin-bottom: 24px
+
+		.service
+			&-list
+				width: 100%
+				display: flex
+				flex-wrap: wrap
+				justify-content: flex-start
+				align-items: flex-start
+				
+			display: flex
+			flex-direction: column
+			align-items: center
+			position: relative
+			width: calc(33% - 9px)
+			min-width: 210px
+			margin-bottom: 33px
+			margin-right: 9px
+			height: 400px
+			box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
+			background-color: #ffffff
+			padding: 15px
+
+			&__title
+				height: 76px
+				color: #474747;
+				font-family: "GT Eesti Pro Display";
+				font-size: 17px;
+				font-weight: 300;
+				text-align: center
+
+			&__more-info
+				position: absolute
+				left: 50%
+				transform: translate(-50%, 0)
+				bottom: 21px
+				height: 46px
+				display: flex
+				justify-content: center
+				align-items: center
+				padding: 15px 47px
+				box-shadow: -6px 13px 24px rgba(112, 178, 247, 0.28)
+				border-radius: 21px
+				background-color: #ffffff
+				background-image: linear-gradient(to top, #3b94f3 0%, #8ac2fc 100%), linear-gradient(36deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.11) 47%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 100%)
+
+				
+				button
+					background: transparent
+					border: none
+					padding: 0
+					color: #ffffff;
+					font-family: Circe;
+					font-size: 16px;
+					font-weight: 700;
+
+		
 
 @media screen and (max-width: 1400px)
 	.container
@@ -146,6 +232,10 @@ body
 			
 			.article
 				width: 32%
+
+		&__services
+			.service
+				width: 48%
 
 @media screen and (max-width: 1140px)
 	.container
@@ -167,6 +257,14 @@ body
 				&__number
 					margin-left: 68px
 
+		&__services
+			.services__wrapper
+				display: initial
+
+				.offer
+					width: 90%
+					margin-right: 0
+
 @media screen and (max-width: 850px)
 	.container
 		max-width: 600px
@@ -179,6 +277,14 @@ body
 
 			.pages
 				width: 45%
+
+		&__services
+			.service
+				&__image
+					img
+						width: 210px
+						height: 150px
+
 
 
 @media screen and (max-width: 680px)
@@ -197,15 +303,33 @@ body
 				&__title
 					margin-top: 37px
 
-@media screen and (max-width: 680px)
+		&__services
+			.offer
+				margin-left: 12px
+
+			.service
+				width: 90%
+
+@media screen and (max-width: 500px)
 	.container
 		max-width: 320px
+		padding-left: 15px
 		
 		&__articles
 			
 			.article
 				width: 90%
 				height: 670px
+
+		&__services
+			.offer
+				width: 80%
+
+			.service
+				width: 95%
+
+		
+		
 
 			
 		
