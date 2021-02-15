@@ -30,6 +30,11 @@ body
 	text-align: center
 
 // Стили тут пишите
+
+*,
+*::before,
+*::after 
+	box-sizing: border-box
 	
 .container
 	max-width: 1175px
@@ -46,11 +51,11 @@ body
 		.title
 			color: #212327
 			font-family: 'Circe - Extra Bold'
-			font-size: 37px
 			font-weight: 400
 
 			h2
 				margin-bottom: 0
+				font-size: 37px
 		
 		.article
 			position: relative
@@ -74,17 +79,25 @@ body
 
 			&__title
 				color: #474747
-				font-size: 17px
+				font-size: 14px
 				font-weight: 500
+				line-height: 21px
 
 			&__content
 				color: #474747
 				font-size: 13px
 				font-weight: 300
+				line-height: normal
 
 			&__date
 				font-size: 12px
 				font-weight: 300
+				display: flex
+				align-items: baseline
+				
+				span
+					padding-left: 15px
+					
 
 			&__read-more
 				position: absolute
@@ -106,9 +119,10 @@ body
 					border: none
 					color: #fff
 					padding: 0
+					width: max-content
 
 		.pages
-			width: 25%
+			width: calc(25% - 9px)
 
 			&__title
 				margin-top: 317px
@@ -151,7 +165,7 @@ body
 				&__title
 					color: #212327
 					font-family: "Circe - Extra Bold"
-					font-size: 37px
+					font-size: 24.7px
 					font-weight: 400
 					line-height: 41px
 
@@ -167,6 +181,7 @@ body
 
 					p
 						margin-bottom: 24px
+						line-height: 21px;
 
 		.service
 			&-list
@@ -191,11 +206,12 @@ body
 
 			&__title
 				height: 76px
-				color: #474747;
-				font-family: "GT Eesti Pro Display";
-				font-size: 17px;
+				color: #474747
+				font-family: "GT Eesti Pro Display"
+				font-size: 14.5px
 				font-weight: 300;
 				text-align: center
+				line-height: 21px
 
 			&__more-info
 				position: absolute
