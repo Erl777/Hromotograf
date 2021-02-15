@@ -1,0 +1,55 @@
+.description
+  &__block
+    position: relative
+    width: 326px
+    padding: 15px 0 0 29px
+    height: fit-content
+    &_title
+      width: 268px
+      color: #282828
+      font-family: "GT Eesti Pro Display"
+      font-size: 20px
+      font-weight: 700
+      font-style: normal
+      letter-spacing: normal
+      line-height: normal
+      text-align: left
+      margin: 0 0 25px 0
+    &_text
+      width: 294px
+      color: #212327
+      font-family: "GT Eesti Pro Display"
+      font-size: 14px
+      font-weight: 300
+      font-style: normal
+      letter-spacing: normal
+      line-height: 19px
+      text-align: left
+      margin: 0 0 39px 0
+    &_band
+      position: absolute
+      width: 3px
+      height: 60px
+      background-color: #6baef3
+      left: 0
+      top: 0
+
+
+@media(max-width: 1200px)
+  .description
+    &__col
+      flex-wrap: wrap
+    &__block
+      width: 100%
+      max-width: 326px
+      &_title
+        width: 100%
+        max-width: 268px
+      &_text
+        width: 100%
+        max-width: 294px
+@media(max-width: 475px)
+  .description
+    &__block
+      &_text
+        margin-bottom: 10px

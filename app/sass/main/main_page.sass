@@ -1,0 +1,113 @@
+.top__cards
+  display: flex
+  width: 100%
+  max-width: 1173px
+  padding-left: 40px
+  flex-wrap: wrap
+  justify-content: center
+  margin: 0 auto
+
+.card__main:last-child
+  margin-right: 0
+
+.block__about
+  &_list
+    margin-bottom: 10px
+    &_title
+      width: 100%
+      max-width: 193px !important
+    &_action
+      display: flex
+      align-items: center
+      justify-content: center
+      img
+        margin: 0 0 0 10px !important
+
+@media(max-width: 991px)
+  .block__about
+    &_list
+      &_title
+        max-width: 100% !important
+@media(max-width: 550px)
+  .top__cards
+    padding-left: 0
+  .card__main
+    margin-right: 0
+@media (min-width: 1200px)
+  .main__container
+    width: 100%
+
+
+//
+.card
+  &__main
+    height: 478px
+    padding: 30px 48px 30px 48px
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-right: 11px
+    &_info
+      box-shadow: none
+      height: 214px
+      width: 193px
+      padding: 0
+    &_img
+      width: 100%
+      max-width: 181px
+      height: 222px
+      object-fit: contain
+      margin-bottom: 27px
+
+    &_title
+      width: 173px
+      height: 34px
+      color: #474747
+      font-family: Circe
+      font-size: 16px
+      font-weight: 300
+      font-style: normal
+      letter-spacing: normal
+      line-height: 19.7px
+      text-align: center
+      margin: 0 0 21px 0
+
+    &_price
+      margin: 0 0 21px 0
+      span
+        &:nth-child(1)
+          color: #474747
+          font-family: Circe
+          font-size: 15px
+          font-weight: 300
+          font-style: normal
+          letter-spacing: normal
+          line-height: 10.21px
+          text-align: left
+          text-decoration: line-through
+          margin-right: 10px
+
+        &:nth-child(2)
+          color: #474747
+          font-family: "Circe - Extra Bold"
+          font-size: 22px
+          font-weight: 400
+          font-style: normal
+          letter-spacing: normal
+          line-height: 14.75px
+          text-align: left
+
+    &_btn
+      margin: 0 0 12px 0
+      font-weight: 400
+    &_detail
+      color: #75b6fa
+      font-family: Circe
+      font-size: 16px
+      font-weight: 300
+      font-style: normal
+      letter-spacing: normal
+      line-height: 13.92px
+      text-align: left
+      text-decoration: underline
+      margin: 0

@@ -1,0 +1,195 @@
+.catalog
+  &__container
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+  &__description
+    display: flex
+    margin-top: 33px
+
+.description
+  &__actions
+    display: flex
+    flex-direction: column
+
+  &__text
+    margin-left: 35px
+
+    &_block
+      &-title
+        margin: 0 0 30px 0
+        color: #282828
+        font-family: "GT Eesti Pro Display"
+        font-size: 20px
+        font-weight: 700
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+        text-align: left
+
+      &-text
+        margin: 0 0 59px 0
+        color: #212327
+        font-family: "GT Eesti Pro Display"
+        font-size: 14px
+        font-weight: 300
+        font-style: normal
+        letter-spacing: normal
+        line-height: 19px
+        text-align: left
+
+        &:last-child
+          margin-bottom: 0
+
+      &-list
+        margin: 30px 0
+        list-style-type: none
+        padding: 0
+
+.card
+  width: 279px
+  height: 388px
+  padding: 15px 15px 20px 15px
+  box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
+  background-color: #ffffff
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin: 0 8px 31px 0
+
+  &__offer
+    width: 249px
+    height: 359px
+    border: 10px solid #6baef3
+    padding: 74px 26px 32px
+
+    & > .card__info_subtitle
+      p
+        margin-bottom: 20px
+      display: block
+
+    &_title
+      margin: 0 0 69px 0
+      color: #212327
+      font-family: "Circe - Extra Bold"
+      font-size: 23px
+      font-weight: 400
+      font-style: normal
+      letter-spacing: normal
+      line-height: normal
+      text-align: left
+
+  &__info
+    box-shadow: none
+    height: 293px
+    padding: 0
+
+    &_title
+      color: #212327
+      font-family: "Circe - Extra Bold"
+      font-size: 37px
+      font-weight: 400
+      font-style: normal
+      letter-spacing: normal
+      text-align: left
+      line-height: normal
+      margin: 0 0 36px 0
+
+    &_text
+      width: 199px
+      color: #454545
+      font-family: "GT Eesti Pro Display"
+      font-size: 16px
+      font-weight: 300
+      font-style: normal
+      text-align: left
+      letter-spacing: normal
+      line-height: normal
+      margin: 0
+
+    &_subtitle
+      display: flex
+      align-items: center
+      width: 208px
+      color: #454545
+      font-family: "GT Eesti Pro Display"
+      font-size: 15px
+      font-weight: 700
+      font-style: normal
+      letter-spacing: normal
+      text-align: left
+      line-height: normal
+      margin-top: auto
+      margin-bottom: 0
+
+      p
+        margin: 0
+
+  &_title
+    margin: 0
+    color: #474747
+    font-family: "GT Eesti Pro Display"
+    font-size: 16px
+    font-weight: 300
+    font-style: normal
+    letter-spacing: normal
+    text-align: center
+    line-height: normal
+
+  &_img
+    padding-bottom: 43px
+
+  &_btn
+    align-self: center
+    width: 152px
+    height: 45px
+    box-shadow: -6px 13px 24px rgba(112, 178, 247, 0.28)
+    border-radius: 21px
+    border: 1px solid #86ae40
+    background-color: #ffffff
+    background-image: linear-gradient(to top, #3b94f3 0%, #8ac2fc 100%), linear-gradient(36deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.11) 47%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 100%)
+    color: #ffffff
+    font-family: Circe
+    font-size: 16px
+    font-weight: 700
+    font-style: normal
+    letter-spacing: 0.5px
+    line-height: normal
+    margin-top: auto
+    outline: none
+
+
+@media(max-width: 991px)
+  .card
+    &__info
+      padding-left: 15px
+
+@media(max-width: 888px)
+  .catalog
+    &__description
+      flex-direction: column
+  .card
+    &__info_subtitle
+      //margin: initial !important
+      padding: 0 !important
+  .description
+    &__text
+      margin: 30px 0 0 0
+
+    &__actions
+      align-items: center
+
+@media(max-width: 800px)
+  .catalog__description
+    padding: 0 30px
+
+@media(max-width: 600px)
+  .description__text
+    &_block
+      &-text
+        margin-bottom: 28px
+      &-title
+        margin-bottom: 15px
+      &-list
+        margin: 15px 0

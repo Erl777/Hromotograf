@@ -1,0 +1,169 @@
+.recall__container
+  display: flex
+  align-items: center
+  width: 100%
+  max-width: 1100px
+  margin: 0 auto
+
+.block__about
+  width: 100%
+  max-width: 169px
+  margin-right: 71px
+
+  &_title
+    width: 100%
+    max-width: 154px
+    color: #212327
+    font-family: "Circe - Extra Bold"
+    font-size: 37px
+    font-weight: 400
+    font-style: normal
+    letter-spacing: normal
+    line-height: 41px
+    text-align: left
+    margin: 0 15px 43px 0
+
+  &_action
+    width: 100%
+    max-width: 169px
+    color: #454545
+    font-family: "GT Eesti Pro Display"
+    font-size: 15px
+    font-weight: 700
+    font-style: normal
+    letter-spacing: normal
+    line-height: 20px
+    text-align: left
+    margin: 0 0 18px 0
+
+  &_list
+    width: 100%
+    max-width: 193px
+    margin-bottom: 31px
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    &_title
+      width: auto
+      margin: 0 0 69px 0
+
+    &_action
+      margin: 0 auto 0 auto
+
+    img
+      margin-top: 28px
+
+.letter
+  &__container
+    display: flex
+    padding: 20px 50px 23px 20px
+    width: 100%
+    max-width: 860px
+    //height: 427px
+    box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
+    background-color: #ffffff
+
+  &_title
+    width: 100%
+    max-width: 205px
+    color: #454545
+    font-family: "GT Eesti Pro Display"
+    font-size: 15px
+    font-weight: 700
+    font-style: normal
+    letter-spacing: normal
+    line-height: 20px
+    text-align: left
+
+  &_img
+
+  &_text
+    &__container
+      margin-left: 39px
+      padding: 40px 0 26px 21px
+      width: 100%
+      max-width: 515px
+      //height: 319px
+      color: #454545
+      font-family: "GT Eesti Pro Display"
+      font-size: 13px
+      font-weight: 400
+      font-style: normal
+      letter-spacing: normal
+      line-height: 18px
+      text-align: center
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+
+  &_address
+    font-style: normal
+    letter-spacing: normal
+    line-height: normal
+    text-align: right
+    width: 247px
+
+  &_from
+    &-name
+      margin: 22px 0 0 0
+
+    &-position
+      margin: 0
+    font-style: normal
+    letter-spacing: normal
+    line-height: normal
+    text-align: right
+    width: 100%
+    max-width: 215px
+
+@media(max-width: 1199px)
+  .letter
+    &__container
+      align-items: center
+
+@media(max-width: 991px)
+  .recall
+    &__container
+      flex-direction: column
+  .block
+    &__about
+      //flex-direction: column
+      display: flex
+      align-items: center
+      justify-content: center
+      max-width: 100%
+      margin: 0
+      &_title
+        max-width: 100%
+        margin: 0
+        font-size: 30px
+      &_action
+        max-width: 100%
+        margin: 0
+
+@media(max-width: 768px)
+  .recall__container
+    padding: 0 5px
+  .letter
+    &__container
+      flex-direction: column-reverse
+    &_text
+      &__container
+        max-width: 600px
+@media(max-width: 475px)
+  .block__about
+    flex-direction: column
+    margin-bottom: 10px
+    &_title
+      text-align: center
+    &_action
+      text-align: center
+  .letter
+    &_text
+      &__container
+        margin-left: 0
+        padding-left: 0
+        padding-top: 5px
+    &__container
+      padding: 5px 8px 5px 8px

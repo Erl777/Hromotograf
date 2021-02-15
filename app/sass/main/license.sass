@@ -1,0 +1,77 @@
+.license
+  &__container
+    width: 100%
+    max-width: 1012px
+    height: 370px
+    border: 10px solid #6baef3
+    display: flex
+    margin: 0 auto
+  &_text
+    width: 40%
+    padding: 80px 0 83px 95px
+    &_title
+      margin: 0
+      width: 100%
+      max-width: 292px
+      color: #212327
+      font-family: "Circe - Extra Bold"
+      font-size: 34px
+      font-weight: 400
+      font-style: normal
+      letter-spacing: normal
+      line-height: normal
+      text-align: left
+  &_action
+    margin-top: 50px
+    display: flex
+    align-items: center
+    height: 34px
+    color: #454545
+    font-family: "GT Eesti Pro Display"
+    font-size: 15px
+    font-weight: 700
+    font-style: normal
+    letter-spacing: normal
+    line-height: 20px
+    text-align: left
+    p
+      width: 164px
+      margin-right: 30px
+  &_img
+    display: flex
+    position: relative
+    width: inherit
+    img
+      object-fit: contain
+      position: absolute
+      bottom: -54px
+      right: 25px
+
+@media(max-width: 991px)
+  .license
+    &_text
+      padding: 20px
+    &_img
+      img
+        width: inherit
+        position: initial
+@media (max-width: 550px)
+  .license
+    &_text_title
+      font-size: 28px
+    &__container
+      height: initial
+      padding-bottom: 30px
+@media(max-width: 400px)
+  .license
+    &_text_title
+      font-size: 24px
+    &_action
+      p
+        font-size: 13px
+    &_img
+      img
+        position: absolute
+        top: 37%
+    &_text
+      padding: 20px
