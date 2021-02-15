@@ -34,6 +34,10 @@
     padding: 33px 43px 71px 18vw
     align-self: baseline
     margin-top: 43px
+    img
+      position: absolute
+      top: 251px
+      right: 0px
     &_text
       max-width: 376px
       width: 100%
@@ -74,13 +78,19 @@
 //          & .feature__block_header
 //            width: 100%
 //            max-width: 275px
-
+@media(max-width: 1400px)
+  .solve__background
+    padding-left: 12vw
 @media(max-width: 1300px)
   .solve
     &__background
       padding-left: 40px
     &__blocks
       margin: 0 10px
+@media(max-width: 1200px)
+  .solve__background
+    img
+      display: none
 @media(max-width: 991px)
   .solve
     &__container
