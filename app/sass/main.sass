@@ -49,13 +49,19 @@ body
   display: flex
   padding: 0
 
+.asideDescription
+  font-family: 'GT Eesti Pro Text',sans-serif
+  font-size: 16px
+  font-weight: 300
+
 
 .asideTitle
   font-size: 37px
-  font-weight: 400
+  font-weight: 700
   line-height: 41px
   color: #212327
   margin-bottom: 50px
+  font-family: 'Circe ExtraBold',sans-serif
 
 .services__asideBlock
   width: calc(21% - 50px)
@@ -90,6 +96,9 @@ body
     outline: none
     opacity: 1
     transition: all ease 0.5s
+    font-family: 'Circe ExtraBold',sans-serif
+    font-size: 16px
+    font-weight: 400
 
     &:hover
       opacity: 0.7
@@ -115,6 +124,7 @@ body
   margin: 0 10px
   text-align: center
   font-size: 17px
+  font-family: 'GT Eesti Pro Text',sans-serif
 
 @media screen and (max-width: 1144px)
   .services__contentWrap
@@ -152,11 +162,12 @@ body
 
 
 .singleService__Content
-  width: 70%
+  width: 85%
   display: flex
   flex-direction: column
   max-width: 780px
   margin: 0 auto
+  font-family: 'GT Eesti Pro Text', sans-serif
 
   p
     font-size: 16px
@@ -167,7 +178,7 @@ body
     width: 80%
 
     span
-      font-weight: 900
+      font-weight: 600
 
 .content_WrapperImg
   display: flex
@@ -180,10 +191,11 @@ body
   background-color: #fcfcfc
 
 .container__singleService__Title
-  font-size: 33px
+  font-size: 27px
   font-weight: 900
   line-height: 41px
   margin: 0 0 32px
+  font-family: 'Circe ExtraBold', sans-serif
 
 .wrapperImg__single
   position: relative
@@ -209,6 +221,7 @@ body
   p
     font-size: 18px
     font-weight: 900
+    font-family: 'GT Eesti Pro Text', sans-serif
 
   span
     display: block
@@ -218,6 +231,7 @@ body
     margin-right: 20px
     font-weight: 900
     z-index: 1
+    font-family: 'Montserrat ExtraBold', sans-serif
 
     &::after
       content: ""
@@ -248,6 +262,11 @@ body
       font-size: 17px
       color: #454545
 
+    p
+      font-family: 'GT Eesti Pro Text', sans-serif
+      font-weight: 700
+      font-size: 17px
+
       &:hover
         text-decoration: none
 
@@ -267,6 +286,9 @@ body
 .singleService__descriptionWrapper_Button
   box-shadow: -6px 13px 24px rgba(112, 178, 247, 0.28)
   border-radius: 22px
+  font-weight: 700
+  letter-spacing: 0.5px
+  font-family: 'Circe ExtraBold', sans-serif
   color: #ffffff
   white-space: nowrap
   background-image: linear-gradient(to top, #3b94f3 0%, #8ac2fc 100%), linear-gradient(36deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.11) 47%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 100%)
@@ -303,6 +325,11 @@ body
 
 .singleService__TabSingle
   display: none
+  font-family: 'GT Eesti Pro Text', sans-serif
+  font-size: 14px
+
+  h3
+    font-weight: 700
 
 .singleService__TabSingle_show
   display: block
@@ -313,41 +340,50 @@ body
   .singleService__Content
     width: 100%
 
+
     p
       width: 100%
   .content_WrapperImg
     width: 100%
 
-    .singleService__footerIcon
-      margin: 0 20px 20px
+  .singleService__footerIcon
+    margin: 0 20px 20px
   .singleService__descriptionWrapper
     flex-direction: column
+
     aside
       width: auto
       order: 1
       margin: 0 auto
+
       a
         position: relative
         bottom: 0
         display: flex
         align-items: center
         margin: 0 15px
+
         img
           width: 24px
           height: 14px
           margin-left: 25px
+
     section
       width: 100%
+
     .singleService__descriptionWrapper__tabsWrapper
       display: flex
       margin: 20px auto 0
       flex-wrap: wrap
-    .singleService__descriptionWrapper_Button
-      margin: 0 20px 20px
     .singleService__TabSingle
       margin: 0 20px
+  .singleService__descriptionWrapper_Button
+    margin: 0 20px 20px
+
+
   .container__singleService__Title
-      font-size: 25px
+    font-size: 25px
+
 @media screen and (max-width: 580px)
   .singleService__footerIcon
     flex-direction: column
@@ -360,3 +396,6 @@ body
     max-height: 33%
     width: auto
     margin-bottom: 20px
+  .singleService__descriptionWrapper_Button
+    margin: 0 5px 20px
+    text-align: center
