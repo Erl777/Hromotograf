@@ -1,5 +1,8 @@
-$(function() {
+// $(function() {
 
-	// Custom JS
+    $(document).ready(function(){
+        console.log('lol')
+        $('.slider__container').slick();
+    });
 
-});
+// });
