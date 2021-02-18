@@ -35,7 +35,7 @@ body
 // Стили тут пишите
 .container
   max-width: 1280px
-
+  width: 100%
   &::before
     content: none
 
@@ -50,7 +50,7 @@ body
   padding: 0
 
 .asideDescription
-  font-family: 'GT Eesti Pro Text',sans-serif
+  font-family: 'GT Eesti Pro Text', sans-serif
   font-size: 16px
   font-weight: 300
 
@@ -61,7 +61,7 @@ body
   line-height: 41px
   color: #212327
   margin-bottom: 50px
-  font-family: 'Circe ExtraBold',sans-serif
+  font-family: 'Circe ExtraBold', sans-serif
 
 .services__asideBlock
   width: calc(21% - 50px)
@@ -96,7 +96,7 @@ body
     outline: none
     opacity: 1
     transition: all ease 0.5s
-    font-family: 'Circe ExtraBold',sans-serif
+    font-family: 'Circe ExtraBold', sans-serif
     font-size: 16px
     font-weight: 400
 
@@ -124,7 +124,7 @@ body
   margin: 0 10px
   text-align: center
   font-size: 17px
-  font-family: 'GT Eesti Pro Text',sans-serif
+  font-family: 'GT Eesti Pro Text', sans-serif
 
 @media screen and (max-width: 1144px)
   .services__contentWrap
@@ -375,6 +375,7 @@ body
       display: flex
       margin: 20px auto 0
       flex-wrap: wrap
+
     .singleService__TabSingle
       margin: 0 20px
   .singleService__descriptionWrapper_Button
@@ -399,3 +400,166 @@ body
   .singleService__descriptionWrapper_Button
     margin: 0 5px 20px
     text-align: center
+
+
+/* Подробная страница услуги */
+
+
+@mixin fontData($size, $weight, $lineHeight: normal)
+  font-size: $size
+  font-weight: $weight
+  @if $lineHeight != normal
+    line-height: $lineHeight
+
+
+
+.detailedService
+  .detailedService__title
+    font-size: 37px
+    @media (max-width: 677px)
+      font-size: 31px
+    font-weight: 600
+    line-height: 41px
+    color: #212327
+    width: 70%
+    @media (max-width: 1000px)
+      width: 100%
+    font-family: 'Circe ExtraBold', sans-serif
+
+.detailedService__contentWrapper
+  display: flex
+  @media (max-width: 911px)
+    flex-direction: column
+  aside
+    width: 20%
+    margin-right: 50px
+    @media (max-width: 991px)
+      width: 30%
+      margin-right: 30px
+    @media (max-width: 911px)
+      width: 100%
+      margin-bottom: 20px
+    span
+      font-weight: 700
+      color: #454545
+
+  section
+    width: 80%
+    .singleService__footerIcon
+      width: 97%
+      .singleService__footerIcon__single
+        padding-right: 10px
+        @media (max-width: 800px)
+          display: flex
+          flex-direction: column
+
+    @media (max-width: 991px)
+      width: 70%
+    @media (max-width: 911px)
+      width: 100%
+    .singleService__wrapperForm
+      display: flex
+      background-color: #ffffff
+      justify-content: space-between
+      margin-bottom: 55px
+      box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
+      img
+        @media (max-width: 991px)
+          display: none
+      .form
+        position: relative
+        z-index: 1
+        margin-top: 20px
+        margin-left: 50px
+
+        @media (max-width: 911px)
+          margin: 0 auto 20px auto
+        @media (max-width: 475px)
+          padding: 0 10px
+
+        &__title
+          @include fontData(32px, 600, 32px)
+          color: #212327
+          max-width: 100%
+          // 360px
+          margin: 0 0 25px 18px
+
+          @media (max-width: 768px)
+            max-width: 100%
+            margin: 0 0 25px 0
+            text-align: center
+          @media (max-width: 475px)
+            @include fontData(26px, 400, 30px)
+
+        &__container
+          display: grid
+          grid-template-columns: repeat(2, 1fr)
+          grid-template-rows: repeat(2, 1fr)
+          grid-gap: 11px
+          row-gap: 9px
+          margin-bottom: 23px
+          @media (max-width: 475px)
+            display: flex
+            flex-direction: column
+            align-items: center
+
+          input
+            width: 213px
+            height: 48px
+            border-radius: 24px
+            border: 1px solid #cdcdcd
+            outline: none
+            padding-left: 28px
+            &::placeholder
+              color: #212327
+              @include fontData(13px, 400, 12px)
+              font-family: 'Montserrat ExtraBold',sans-serif
+              opacity: 0.7
+
+        &__footer
+          display: flex
+          @media (max-width: 475px)
+            flex-direction: column
+            align-items: center
+
+        .agree
+          margin: 0 33px 10px 28px
+          max-width: 170px
+          @include fontData(13px, 300, 21px)
+          color: #a6a5a5
+          @media (max-width: 475px)
+            margin: 0 0 20px 0
+
+        &__btn
+          width: 213px
+          height: 49px
+          border-radius: 24px
+          background-color: #2c3a48
+          color: #fcfcfc
+          border: none
+          outline: none
+          @include fontData(16px, 400, 16px)
+          background-image: linear-gradient(to top, #3b94f3 0%, #8ac2fc 100%), linear-gradient(36deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.11) 47%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 100%)
+          padding: 0
+          transition: all ease 0.3s
+          &:hover
+            cursor: pointer
+            opacity: 0.7
+            transition: all ease 0.3s
+    .singleService__description
+      width: 85%
+      margin: 0 auto
+      div
+        @include fontData(14px, 300, 19px)
+        font-family: 'GT Eesti Pro Text',sans-serif
+
+        h2
+          font-weight: 900
+          font-family: 'GT Eesti Pro Text',sans-serif
+          color: #212327
+          margin: 30px 0
+        p
+          .bold
+            font-weight: 700
+            font-family: 'GT Eesti Pro Text',sans-serif
+            color: #212327
