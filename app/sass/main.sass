@@ -97,7 +97,7 @@ img
 		@media (max-width: 768px)
 			display: flex
 			width: 100%
-			background-color: #000
+			background-color: #212327
 			align-items: center
 			padding-top: 20px
 	.geolocation
@@ -128,6 +128,11 @@ img
 		color: #a6a5a5
 		@include fontData(12px, 400, 12px)
 		text-decoration: underline
+	@media (max-width: 768px)
+		background-color: #212327
+		box-shadow: none
+		&__number
+			color: white
 
 .geolocation
 	position: relative
