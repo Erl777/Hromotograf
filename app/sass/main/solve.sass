@@ -1,0 +1,122 @@
+.solve
+  &__container
+    display: flex
+    align-items: center
+    margin: 67px 0 80px 0
+  &_square
+    position: absolute
+    background-color: #6baef3
+
+    //z-index: 0
+  &__blocks
+    display: flex
+    margin: 0 29px 0 39px
+    & .description__block
+      width: 100%
+      max-width: 326px
+    div:first-child
+      div:last-child
+        justify-content: center
+        display: flex
+    div:last-child
+      div:last-child
+        & .feature__block_header
+          max-width: 275px
+          & .square
+            background-color: #e3f0fd !important
+            width: 100%
+            max-width: 77px
+  &__background
+    position: relative
+    width: 100%
+    max-width: 780px
+    background-color: #212327
+    padding: 33px 43px 71px 18vw
+    align-self: baseline
+    margin-top: 43px
+    img
+      position: absolute
+      top: 251px
+      right: 0px
+    &_text
+      max-width: 376px
+      width: 100%
+      &-block
+        padding: 24px 0 0 26px
+      &-title
+        width: 100%
+        max-width: 350px
+        color: #fcfcfc
+        font-family: "Circe - Extra Bold", system-ui
+        font-size: 37px
+        font-weight: 400
+        font-style: normal
+        letter-spacing: normal
+        line-height: 41px
+        text-align: left
+        position: relative
+
+      &-about
+        width: 100%
+        max-width: 173px
+        color: #fcfcfc
+        font-family: "GT Eesti Pro Display"
+        font-size: 16px
+        font-weight: 300
+        font-style: normal
+        letter-spacing: normal
+        line-height: 21px
+        text-align: left
+        margin-top: 39px
+
+
+//@media(max-width: 1557px)
+//  .solve
+//    &__blocks
+//      div:last-child
+//        div:last-child
+//          & .feature__block_header
+//            width: 100%
+//            max-width: 275px
+@media(max-width: 1400px)
+  .solve__background
+    padding-left: 12vw
+@media(max-width: 1300px)
+  .solve
+    &__background
+      padding-left: 40px
+    &__blocks
+      margin: 0 10px
+@media(max-width: 1200px)
+  .solve__background
+    img
+      display: none
+@media(max-width: 991px)
+  .solve
+    &__container
+      flex-direction: column
+    &__background
+      margin-top: 0
+      margin-bottom: 10px
+    &__blocks
+      margin: 0
+
+@media(max-width: 680px)
+  .solve
+    &__container
+      padding: 0 5px
+@media(max-width: 550px)
+  .solve
+    &__background
+      padding: 10px 10px
+      &_text
+        &-block
+          padding: 0 0 0 10px
+        &-about
+          max-width: 100%
+          margin-top: 15px
+    &__blocks
+      flex-direction: column-reverse
+@media(max-width: 375px)
+  .solve__background_text-title
+    font-size: 28px

@@ -1,0 +1,250 @@
+.hromot_page
+  &__container
+    width: 100%
+    max-width: 1086px
+  &-form
+    display: flex
+    //width: 1079px
+    border: 10px solid #6baef3
+    margin-top: -38px
+    padding: 97px 70px 82px 63px
+  &-img_block
+    margin: 0 41px 49px 41px
+    p
+      margin-top: 43px
+      width: 140px
+      color: #454545
+      font-family: "GT Eesti Pro Display"
+      font-size: 15px
+      font-weight: 700
+      font-style: normal
+      letter-spacing: normal
+      line-height: 20px
+      text-align: left
+
+  &-about
+    &_text
+      margin: 0 91px 32px 19px
+      width: 100%
+      max-width: 660px
+      color: #454545
+      font-family: "GT Eesti Pro Display"
+      font-size: 16px
+      font-weight: 300
+      font-style: normal
+      letter-spacing: normal
+      line-height: 21px
+      text-align: left
+
+      p
+        margin: 0
+
+        &:nth-child(2)
+          margin: 25px 0
+
+      ul
+        margin: 0
+        padding: 0
+        list-style: none
+
+    &_tabs
+      /* Style for "Прямоуголь" */
+      width: 100%
+      max-width: 770px
+      box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.1)
+      background-color: #ffffff
+      padding: 30px 79px 55px 47px
+
+  &_main
+    &-block
+      display: flex
+
+
+.tabs__container
+  display: flex
+  justify-content: space-between
+
+  button
+    width: auto
+    padding: 0 30px 0 30px
+
+.tab
+  font-family: Circe
+  background-image: none
+  color: #212327
+  border: 1px solid #71b4f9
+  &__container
+    margin-top: 28px
+    padding-left: 7px
+    color: #212327
+    font-family: "GT Eesti Pro Display"
+    font-size: 14px
+    font-weight: 300
+    font-style: normal
+    letter-spacing: normal
+    line-height: 19px
+    text-align: left
+    p
+      margin-top: 24px
+      &:last-child
+        margin-bottom: 0
+
+  &_active
+    color: white
+    border: 1px solid #86ae40
+    background-image: linear-gradient(to top, #3b94f3 0%, #8ac2fc 100%), linear-gradient(36deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.11) 47%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 100%)
+
+.form
+  display: flex
+  &_btn
+    width: 213px
+    margin-top: 15px
+    font-family: "Muller Extra Bold"
+  &_text
+    margin-right: 40px
+    width: 223px
+    p:last-child
+      width: 179px
+      height: 37px
+      color: #a6a5a5
+      font-family: "GT Eesti Pro Display"
+      font-size: 11px
+      font-weight: 300
+      font-style: normal
+      letter-spacing: normal
+      line-height: normal
+      text-align: left
+  &-title
+    font-family: "Circe - Extra Bold", system-ui
+    font-weight: 400
+    font-size: 26px
+    line-height: 27px
+    color: #212327
+  &_input__container
+    width: 100%
+    max-width: 401px
+    justify-content: space-between
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    input
+      width: 189px
+      height: 28px
+      border: none
+      outline: none
+      border-bottom: 1px solid #d9d8d8
+      padding-bottom: 15px
+      &::placeholder
+        padding: 0 0 15px 4px
+        color: #212327
+        font-family: "GT Eesti Pro Display"
+        font-size: 13px
+        font-weight: 300
+        font-style: normal
+        letter-spacing: normal
+        line-height: 51.71px
+        text-align: left
+  &_action
+    margin-left: 50px
+    width: 213px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    p
+      margin: 0
+      width: 144px
+      height: 37px
+      color: #a6a5a5
+      font-family: "GT Eesti Pro Display"
+      font-size: 11px
+      font-weight: 300
+      font-style: normal
+      letter-spacing: normal
+      line-height: normal
+      text-align: center
+@media(max-width: 1200px)
+  .page_title
+    text-align: center
+  .hromot_page
+    &-img_block
+      display: none
+    &__container
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin: 0 auto
+    &-form
+      z-index: -1
+      display: flex
+      flex-direction: column
+      padding: 45px 35px 41px 31px
+      margin-top: 10px
+      form
+        display: flex
+        flex-direction: column
+        align-items: center
+        & .form_action
+          margin: 20px 0 0 0
+  .form_input__container
+    input
+      margin: 20px 0
+
+
+@media(max-width: 768px)
+  .hromot_page
+    &__container
+      padding: 0 5px
+    &-about
+      &_text
+        margin-left: 0
+        margin: 0 auto
+        padding: 0 15px
+      &_tabs
+        display: flex
+        flex-direction: column
+        padding: 15px 40px 22px 24px
+  .tabs__container
+    //flex-direction: column
+    display: flex
+    width: 100%
+    //justify-content: center
+    button
+      padding: 0 15px
+      //height: auto
+  .tab
+    margin-top: 10px
+    align-self: auto
+
+@media(max-width: 580px)
+  .hromot_page-about_tabs
+    padding: 6px 20px 10px 12px
+  .tabs__container
+    //overflow-x: scroll
+    //overflow-y: hidden
+@media(max-width: 475px)
+  .hromot_page
+    &-about
+      &_tabs
+      &_text
+        margin-left: 0
+        margin: 0 auto
+        padding: 0 5px
+  .tab
+    height: 40px
+    &__container
+      margin-top: 0
+      p
+        margin-top: 10px
+  .hromot_page-about_tabs
+    display: flex
+    flex-direction: column
+  .tabs__container
+    flex-direction: column
+    justify-content: flex-start
+  .form
+    &_text
+      margin: 0
+      align-self: center
+    &_input__container
+      justify-content: center

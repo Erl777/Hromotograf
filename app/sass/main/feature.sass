@@ -1,0 +1,234 @@
+.feature
+  &__container
+    margin-top: 57px
+    width: 100%
+    max-width: 1168px
+    margin: 57px auto 0 auto
+
+  &__about
+    display: flex
+
+    &_footer
+      width: 860px
+      display: flex
+      justify-content: space-between
+
+      div
+        & .square
+          background-color: #e3f0fd !important
+
+        &:last-child
+          & .square
+            margin-right: 38px
+            width: 100%
+            max-width: 77px
+
+    &_col
+      &_1
+
+      &_2
+        position: relative
+
+        img:first-child
+          position: absolute
+          left: -92px
+
+        .description__block
+          margin-left: 252px
+          color: #fcfcfc
+          padding: 10px 0 0 35px
+
+          &_title
+            color: #fcfcfc
+  //& .background
+        //  background-color: #212327
+        //  width: 985px
+        //  height: 1019px
+        //  position: absolute
+        //  top: -136px
+        //  z-index: -1
+        //  color: white
+        //  padding-top: 136px
+  &_btn
+    width: 213px
+
+  &__block
+    &_1
+      width: 388px
+
+    &_2
+      width: 394px
+
+    &_action
+      width: 100%
+      max-width: 203px
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 52px 87px 58px 41px
+
+      p
+        width: 100%
+        max-width: 161px
+        height: 34px
+        color: #454545
+        font-family: "GT Eesti Pro Display"
+        font-size: 15px
+        font-weight: 700
+        font-style: normal
+        letter-spacing: normal
+        line-height: 20px
+        text-align: left
+        margin-right: 20px
+
+    &_text
+      width: 100%
+      max-width: 360px
+      color: #454545
+      font-family: "GT Eesti Pro Display"
+      font-size: 16px
+      font-weight: 300
+      font-style: normal
+      letter-spacing: normal
+      line-height: 21px
+      text-align: left
+      margin: 24px 27px 37px 0
+
+    &_title
+      width: 100%
+      max-width: 387px
+      color: #212327
+      font-family: "Circe - Extra Bold", system-ui
+      font-size: 37px
+      font-weight: 400
+      font-style: normal
+      letter-spacing: normal
+      line-height: 41px
+      text-align: left
+
+    &_header
+      display: flex
+      width: 100%
+      max-width: 368px
+      position: relative
+
+      span
+        position: absolute
+        top: 16px
+        left: 8px
+        color: #212327
+        font-family: "Montserrat - Extra Bold"
+        font-size: 44px
+        font-weight: 400
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+
+      div
+        background-color: #6baef3 !important
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #212327
+        font-family: "Montserrat - Extra Bold"
+        font-size: 44px
+        font-weight: 400
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+        text-align: left
+        margin-right: 17px
+
+      p
+        width: 100%
+        max-width: 274px
+        color: #212327
+        font-family: "GT Eesti Pro Display"
+        font-size: 20px
+        font-weight: 700
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+        text-align: left
+
+.background
+  width: 50vw
+  background-color: #212327
+  position: absolute
+  height: 1000px
+  right: 0
+  top: 0
+  &_action
+    display: flex
+    align-items: center
+    //width: 193px
+    color: #a6a5a5
+    font-family: "GT Eesti Pro Display"
+    font-size: 15px
+    font-weight: 400
+    font-style: normal
+    letter-spacing: normal
+    line-height: 20px
+    text-align: right
+    p
+      width: 100%
+      max-width: 193px
+    img
+      margin-left: 23px
+@media(max-width: 1199px)
+  .feature
+    &__block
+      &_1
+        .feature__block_title
+          margin-top: 48px
+  .feature__about
+    display: flex
+    flex-direction: column
+    //flex-wrap: wrap
+    &_footer
+      width: 100%
+      max-width: 860px
+    &_col_1
+      display: flex
+      flex-wrap: wrap
+
+    &_col_2
+      margin-bottom: 10px
+      img:first-child
+        display: none
+      .description__block
+        margin-left: 0
+        &_title
+          color: #a6a5a5 !important
+        color: #a6a5a5
+  .background
+    display: none
+
+@media(max-width: 991px)
+  .feature__about
+    &_col_1
+      justify-content: center
+    &_col_2
+      justify-content: center
+      display: flex
+      .description__block
+        justify-content: center
+
+    &_footer
+      flex-wrap: wrap
+      justify-content: center
+@media(max-width: 475px)
+  .feature__block
+    &_1
+      width: 100%
+      max-width: 388px
+    &_2
+      width: 100%
+      max-width: 394px
+    &_header
+      .square
+        width: 100%
+        max-width: 77px
+@media(max-width: 425px)
+  .feature__container
+    padding: 0 10px

@@ -1,9 +1,3 @@
-$(function() {
-
-	// Custom JS
-
-
-});
 let $tabs = function (target) {
    let
        _elemTabs = (typeof target === 'string' ? document.querySelector(target) : target),
@@ -66,3 +60,4 @@ let $tabs = function (target) {
 };
 
 $tabs('._tabsService');
+// });

@@ -1,0 +1,132 @@
+.client
+  &_list
+    display: flex
+    width: 589px
+    //flex-direction: column
+    //justify-content: space-between
+    &_about_text
+      /* Style for "Поэтому у" */
+      width: 100%
+      max-width: 332px
+      color: #212327
+      font-family: "Circe - Extra Bold", system-ui
+      font-size: 37px
+      font-weight: 400
+      font-style: normal
+      letter-spacing: normal
+      line-height: 41px
+      text-align: left
+    div
+      display: flex
+      flex-direction: column
+      //&:nth-child(1)
+      //  margin-bottom: 39px
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: space-around
+    &__container
+      display: flex
+      width: 100%
+      max-width: 1017px
+      margin: 0 auto
+      padding-left: 45px
+
+
+.quality
+  &_block
+    width: 100%
+    max-width: 400px
+    position: relative
+    &_description
+      margin-bottom: 59px
+      p
+        &:nth-child(1)
+          width: 77px !important
+  &_text
+    display: flex
+    position: absolute
+    top: 18px
+    left: 12px
+    color: #212327
+    font-family: "GT Eesti Pro Display"
+    font-size: 20px
+    font-weight: 700
+    font-style: normal
+    letter-spacing: normal
+    line-height: normal
+    text-align: left
+    &_description
+      left: 16px
+    p
+      margin: 0
+      &:nth-child(1)
+        width: 111px
+        height: 32px
+        color: #212327
+        font-family: "Montserrat - Extra Bold"
+        font-size: 44px
+        font-weight: 400
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+        text-align: left
+      &:nth-child(2)
+        width: 100%
+        max-width: 255px
+        margin-left: 10px
+
+.square
+  width: 77px
+  height: 80px
+  background-color: #e3f0fd
+
+@media(max-width: 991px)
+  .client_list
+    &__container
+      padding-left: 0
+      flex-wrap: wrap
+      justify-content: center
+    &_about
+      margin-bottom: 30px
+@media(max-width: 650px)
+  .client_list
+    width: 100%
+    max-width: 589px
+    flex-wrap: wrap
+    div
+      flex-direction: row
+      margin-top: 20px
+      img
+        margin-top: 0 !important
+        width: 100%
+        max-width: fit-content
+        //object-fit: contain
+      &:nth-child(2)
+        //img:nth-child(2)
+        //  margin-top: 0 !important
+      &:last-child
+        margin-left: 0 !important
+        align-items: center !important
+        //img
+        //  &:last-child
+        //    margin-top: 0 !important
+      //&:nth-child(1)
+      //  img
+      //    &:last-child
+      //      margin-top: 0 !important
+
+@media(max-width: 450px)
+  .client_list
+    div
+      flex-direction: column
+      flex-wrap: wrap
+      margin-top: 0
+      img
+        margin-top: 15px !important
+@media(max-width: 350px)
+  .client_list_about
+    padding: 0 5px
+  .quality_text
+    p:last-child
+      font-size: 15px

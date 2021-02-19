@@ -1,0 +1,127 @@
+.article
+  &_action_block
+    width: 197px
+    height: 197px
+    margin: 28px 65px 0 13px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    p
+      /* Style for "Рекомендуе" */
+      width: 131px
+      color: #212327
+      font-family: "Circe - Extra Bold", system-ui
+      font-size: 22px
+      font-weight: 400
+      font-style: normal
+      letter-spacing: normal
+      line-height: normal
+      text-align: left
+      margin: 64px auto 26px auto
+
+  &_img
+    &_block
+      height: fit-content
+      > img
+        float: left
+        margin-left: 30px
+        margin-right: 23px
+        //z-index: 2
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        width: 435px
+        height: 240px
+        border: 10px solid #6baef3
+        //left: -24px
+        top: 30px
+        z-index: -1
+    &_border
+
+  &__container
+    color: #212327
+    font-family: "GT Eesti Pro Display"
+    font-size: 15px
+    font-weight: 300
+    font-style: normal
+    letter-spacing: normal
+    line-height: 19px
+    text-align: left
+  &_main
+    &_info
+      ul
+        list-style: none
+        padding: 0
+  &_header
+    &__container
+      display: flex
+      //img
+      //  margin-right: 23px
+  &_footer
+    &__container
+      display: flex
+      flex-wrap: wrap
+
+.card
+  &__article
+    &:last-child
+      margin-right: 0
+    box-shadow: -6px 13px 57px rgba(112, 178, 247, 0.3)
+    width: 287px
+    height: 512px
+    padding: 15px 15px 25px 15px
+    &_title
+      /* Style for "Распростра" */
+      width: 222px
+      color: #474747
+      font-family: "GT Eesti Pro Display"
+      font-size: 17px
+      font-weight: 500
+      font-style: normal
+      letter-spacing: normal
+      line-height: 21px
+      text-align: left
+      margin: 17px 0 17px 0
+    &_text
+      margin: 0 0 22px 0
+    &_date
+      margin: 0 0 0 0
+    &_btn
+      margin-top: 40px
+@media(max-width: 1200px)
+  .article_footer__container
+    justify-content: center
+@media(max-width: 768px)
+  .article
+    &_img
+      &_block
+        display: flex
+        flex-direction: column
+        align-items: center
+        &::before
+          display: none
+        > img
+          float: none
+          margin: 0
+    &__container
+      padding: 0 20px
+  .page_title
+    line-height: normal
+    text-align: center
+
+@media(max-width: 609px)
+  .article_action_block
+    margin-bottom: 30px
+  .card__article
+    margin-right: 0
+@media(max-width: 600px)
+  .article
+    &_img
+      &_block
+        > img
+          width: 100%
+          max-width: fit-content
+  .page_title
+    font-size: 1.5em
