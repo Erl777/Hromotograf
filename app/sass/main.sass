@@ -303,7 +303,9 @@ body
 						width: 210px
 						height: 150px
 
-
+@media(max-width: 768px)
+	.container__articles
+		margin-bottom: 20px
 
 @media screen and (max-width: 680px)
 	.container
@@ -334,10 +336,14 @@ body
 		padding-left: 15px
 		
 		&__articles
-			
+			width: 100%
+			max-width: 400px
 			.article
 				width: 90%
-				height: 670px
+				height: 540px
+				&__image
+					display: flex
+					justify-content: center
 
 		&__services
 			.offer
