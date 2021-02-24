@@ -3,8 +3,13 @@
   align-items: center
   width: 100%
   max-width: 1100px
-  margin: 0 auto
-  margin-bottom: -40px
+  margin: 0 auto -40px auto
+  //margin-bottom: -40px
+  @media (max-width: 1100px)
+    max-width: 100%
+    overflow: hidden
+  @media (max-width: 768px)
+    margin-bottom: 20px
 .slider__container
   display: flex
 .block__about

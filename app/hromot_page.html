@@ -6,7 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
-<body>
+<body class="hromot-page">
+<header class="header container main__header">
+    <a href="/">
+        <img src="img/logo.png" alt="logo" class="logo">
+    </a>
+    <nav class="nav">
+        <a href="about-us.html" class="nav__link">
+            Кто мы?
+        </a>
+        <a href="services.html" class="nav__link">
+            Услуги
+        </a>
+        <a href="catalog.html" class="nav__link">
+            Каталог
+        </a>
+        <a href="articles.html" class="nav__link">
+            Статьи
+        </a>
+    </nav>
+    <a href="tel:7 (343) 300 90 95" class="back-call">
+			<span class="circle-blue">
+				<img src="img/icon_tel.png" alt="">
+			</span>
+        <p class="back-call__number">
+            7 (343) 300 90 95
+            <span class="back-call__text">
+					обратный звонок
+				</span>
+        </p>
+    </a>
+    <div class="geolocation">
+        <div class="circle-blue">
+            <img src="img/geolocation.png" alt="">
+        </div>
+        <p class="geolocation__description">
+            Екатеринбург, Сибирский<br>
+            тракт, 57 оф. 308/311
+        </p>
+        <a href="#" class="geolocation__link">
+            Посмотреть на карте
+        </a>
+    </div>
+</header>
 <div class="container">
     <div class="row ">
         <div class="hromot_page__container">
@@ -38,13 +80,45 @@
                     </div>
                     <div class="hromot_page-about_tabs">
                         <div class="tabs__container">
-                            <button class="card_btn tab tab_active">Описание</button>
-                            <button class="card_btn tab">Характеристики</button>
-                            <button class="card_btn tab">Узнать актуальную цену</button>
+                            <button class="card_btn tab tab_active js-tab" data-to="description">Описание</button>
+                            <button class="card_btn tab js-tab" data-to="characteristics">Характеристики</button>
+                            <button class="card_btn tab js-tab" data-to="price">Узнать актуальную цену</button>
                         </div>
-                        <div class="tab__container">
+                        <div class="tab__container show js-tab__container" data-page="description">
                             <p>
                                 ТОЧНОСТЬ: Обеспечение достоверности данных на каждом этапе – высокая воспроизводимость работы насоса и автосамплера, стабильность термостата колонок
+                                и
+                                детектора.</p>
+                            <p>
+                                УДОБСТВО: Управление прибором возможно при помощи ПО с компьютера, с панелей управления на блоках (опция) или с жидкокристаллической сенсорной
+                                панели
+                                GUI
+                                (опция).
+                            </p>
+                            <p>
+                                КАЧЕСТВО: Хроматографы Hitachi производятся в Японии с использованием максимально надежных материалов и современных технологий.
+                            </p>
+                            <p><b> Прибор внесен в Государственный реестр средств измерений РФ </b></p>
+                        </div>
+                        <div class="tab__container js-tab__container" data-page="characteristics">
+                            <p>
+                                ТОЧНОСТЬ2: Обеспечение достоверности данных на каждом этапе – высокая воспроизводимость работы насоса и автосамплера, стабильность термостата колонок
+                                и
+                                детектора.</p>
+                            <p>
+                                УДОБСТВО: Управление прибором возможно при помощи ПО с компьютера, с панелей управления на блоках (опция) или с жидкокристаллической сенсорной
+                                панели
+                                GUI
+                                (опция).
+                            </p>
+                            <p>
+                                КАЧЕСТВО: Хроматографы Hitachi производятся в Японии с использованием максимально надежных материалов и современных технологий.
+                            </p>
+                            <p><b> Прибор внесен в Государственный реестр средств измерений РФ </b></p>
+                        </div>
+                        <div class="tab__container js-tab__container" data-page="price">
+                            <p>
+                                ТОЧНОСТЬ3: Обеспечение достоверности данных на каждом этапе – высокая воспроизводимость работы насоса и автосамплера, стабильность термостата колонок
                                 и
                                 детектора.</p>
                             <p>
@@ -83,5 +157,107 @@
         </div>
     </div>
 </div>
+<footer class="footer">
+
+    <div class="footer-bg"></div>
+
+    <div class="container footer-container">
+
+        <div class="header-vertical">
+
+            <a href="/">
+                <img src="img/footer-logo.png" alt="logo" class="logo">
+            </a>
+
+            <nav class="nav">
+                <a href="about-us.html" class="nav__link">
+                    Кто мы?
+                </a>
+                <a href="services.html" class="nav__link">
+                    Услуги
+                </a>
+                <a href="catalog.html" class="nav__link">
+                    Каталог
+                </a>
+                <a href="articles.html" class="nav__link">
+                    Статьи
+                </a>
+            </nav>
+            <div>
+
+                <a href="tel:7 (343) 300 90 95" class="back-call">
+					<span class="circle-blue">
+						<img src="img/icon_tel.png" alt="">
+					</span>
+                    <p class="back-call__number">
+                        7 (343) 300 90 95
+                        <span class="back-call__text">
+							обратный звонок
+						</span>
+                    </p>
+                </a>
+                <div class="geolocation">
+                    <div class="circle-blue">
+                        <img src="img/geolocation.png" alt="">
+                    </div>
+                    <p class="geolocation__description">
+                        Екатеринбург, Сибирский<br>
+                        тракт, 57 оф. 308/311
+                    </p>
+                    <a href="#" class="geolocation__link">
+                        Посмотреть на карте
+                    </a>
+                </div>
+            </div>
+            <div class="social">
+                <a class="social__link" href="#">
+                    <img src="img/vk_icon.png" alt="">
+                </a>
+                <a class="social__link" href="#">
+                    <img src="img/whatsapp_icon.png" alt="">
+                </a>
+                <a class="social__link" href="#">
+                    <img src="img/insta2.png" alt="">
+                </a>
+            </div>
+            <div class="copyright_mobile">
+                ХРОМАТОГРАФ.РУ Copyright © 2020
+            </div>
+        </div>
+
+        <img class="footer__img" src="img/3-layers.png" alt="">
+
+        <form class="form">
+            <p class="form__title">
+                Остались еще<br>
+                вопросы? Напишите нам
+            </p>
+            <div class="form__container">
+                <input type="text" placeholder="Ваше имя">
+                <input type="tel" placeholder="Номер телефона">
+                <input type="email" placeholder="E-mail">
+                <input type="text" placeholder="Сообщение">
+            </div>
+
+            <div class="form__footer">
+
+                <p class="agree">
+                    Заполняя данную форму <b>вы соглашаетесь
+                    на обработку</b> персональных данных
+                </p>
+                <button class="form__btn">
+                    Оставить заявку
+                </button>
+
+            </div>
+            <div class="form_copyright">
+                ХРОМАТОГРАФ.РУ Copyright © 2020
+            </div>
+        </form>
+
+    </div>
+</footer>
+<!--<script src="js/hromotoPage.js"></script>-->
+<script src="js/scripts.min.js"></script>
 </body>
 </html>

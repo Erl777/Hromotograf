@@ -1,3 +1,10 @@
+.hromot-page
+  .header
+    .geolocation__description
+      color: #000
+  .footer
+    margin-top: 60px
+
 .hromot_page
   &__container
     width: 100%
@@ -74,6 +81,7 @@
   color: #212327
   border: 1px solid #71b4f9
   &__container
+    display: none
     margin-top: 28px
     padding-left: 7px
     color: #212327
@@ -84,6 +92,8 @@
     letter-spacing: normal
     line-height: 19px
     text-align: left
+    &.show
+      display: block
     p
       margin-top: 24px
       &:last-child
