@@ -11,7 +11,8 @@ var gulp           = require('gulp'),
 		autoprefixer   = require('gulp-autoprefixer'),
 		ftp            = require('vinyl-ftp'),
 		notify         = require("gulp-notify"),
-		rsync          = require('gulp-rsync');
+		rsync          = require('gulp-rsync'),
+	 	fileinclude = require('gulp-file-include');
 
 gulp.task('browser-sync', function() {
 	browserSync.init({
@@ -104,6 +105,10 @@ gulp.task('code', function() {
 	return gulp.src('app/**/*.html')
 	.pipe(browserSync.reload({ stream: true }))
 });
+
+function html() {
+	return src(path.src.html).pipe(fileinclude()).pipe(webphtml()).pipe(dest(path.build.html)).pipe(browsersync.stream())
+}
 
 gulp.task('watch', function() {
 	gulp.watch('app/sass/**/*.sass', gulp.parallel('sass'));

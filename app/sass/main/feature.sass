@@ -1,9 +1,8 @@
 .feature
   &__container
-    margin-top: 57px
     width: 100%
     max-width: 1168px
-    margin: 57px auto 0 auto
+    margin: 57px auto 50px auto
 
   &__about
     display: flex
@@ -55,6 +54,9 @@
   &__block
     &_1
       width: 388px
+      .feature__block_title
+        @media(min-width: 1199px)
+          margin-top: 40px
 
     &_2
       width: 394px
@@ -100,7 +102,7 @@
       color: #212327
       font-family: "Circe - Extra Bold", system-ui
       font-size: 37px
-      font-weight: 400
+      font-weight: 700
       font-style: normal
       letter-spacing: normal
       line-height: 41px
@@ -117,9 +119,9 @@
         top: 16px
         left: 8px
         color: #212327
-        font-family: "Montserrat - Extra Bold"
+        font-family: "Montserrat - Extra Bold",sans-serif
         font-size: 44px
-        font-weight: 400
+        font-weight: 700
         font-style: normal
         letter-spacing: normal
         line-height: normal
@@ -130,9 +132,9 @@
         justify-content: center
         align-items: center
         color: #212327
-        font-family: "Montserrat - Extra Bold"
+        font-family: "Montserrat - Extra Bold", sans-serif
         font-size: 44px
-        font-weight: 400
+        font-weight: 700
         font-style: normal
         letter-spacing: normal
         line-height: normal

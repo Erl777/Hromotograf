@@ -1,4 +1,33 @@
-@import "vars"
+$blue: #3b94f3
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	height: auto
+	font-family: 'GT Eesti Pro Text', sans-serif
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
 // Стили тут пишите
 
 .container
@@ -65,13 +94,15 @@ img
 		@media (max-width: 768px)
 			display: flex
 			width: 100%
-			background-color: #000
+			background-color: #212327
 			align-items: center
 			padding-top: 20px
 	.geolocation
+		z-index: 1
 		@media (max-width: 930px)
 			margin-top: 20px
 	.back-call
+		z-index: 1
 		@media (max-width: 720px)
 			margin-top: 20px
 
@@ -96,6 +127,12 @@ img
 		color: #a6a5a5
 		@include fontData(12px, 400, 12px)
 		text-decoration: underline
+.footer .back-call
+	@media (max-width: 768px)
+		background-color: #212327
+		box-shadow: none
+		&__number
+			color: white
 
 .geolocation
 	position: relative
@@ -163,6 +200,10 @@ img
 .small-container
 	width: 100%
 	max-width: 850px
+	@media(max-width: 600px)
+		display: flex
+		flex-direction: column
+		align-items: center
 
 .square-blue
 	width: 77px
@@ -218,7 +259,7 @@ img
 			margin: 0 0 35px 0
 		@media (max-width: 600px)
 			flex-direction: column
-			align-items: center
+			//align-items: center
 		.indicator
 			position: relative
 			display: inline-flex
@@ -280,6 +321,8 @@ img
 				margin-bottom: 30px
 			&__description
 				color: #212327
+				@media(max-width: 768px)
+					font-size: 16px
 				@include fontData(14px, 400, 16px)
 			&:nth-child(1)
 				max-width: 560px
@@ -361,8 +404,8 @@ img
 			max-height: 355px
 			@media (max-width: 768px)
 				margin-right: 20px
-				width: 120px
-				height: 180px
+				width: 160px
+				height: 240px
 			@media (max-width: 500px)
 				margin: 0 0 30px 0
 		.description-container
@@ -370,6 +413,8 @@ img
 				color: #474747
 				@include fontData(14px, 300)
 				margin-bottom: 20px
+				@media(max-width: 768px)
+					text-align: center
 		.feedback
 			display: flex
 			align-items: center
@@ -398,6 +443,7 @@ img
 	@media (max-width: 768px)
 		flex-direction: column
 	&__sidebar
+		width: 190px
 		margin: 120px 100px 0 0
 		@media (max-width: 992px)
 			margin: 60px 30px 0 0
@@ -425,9 +471,7 @@ img
 				content: url("../img/arrow_right.svg")
 				margin-top: 30px
 				@media (max-width: 768px)
-					display: inline-block
-					margin: 0
-					transform: rotate(90deg)
+					display: none
 	&__container
 		display: grid
 		grid-template-columns: repeat(3, 1fr)
@@ -472,7 +516,10 @@ img
 			@media (max-width: 992px)
 				padding: 10px 0 0 10px
 			@media (max-width: 475px)
-				text-align: center
+				text-align: left
+				padding: 0
+				width: 198px
+				margin: 0 auto
 		&__title
 			color: #212327
 			@include fontData(44px, 400, 42px)
@@ -506,8 +553,9 @@ img
 		@media (max-width: 992px)
 			margin: 60px 30px 0 0
 		@media (max-width: 768px)
-			margin: 0
+			margin: 0 0 10px 0
 			text-align: center
+
 		.title
 			position: relative
 			color: #212327
@@ -627,6 +675,8 @@ img
 		margin-right: 138px
 		@media (max-width: 900px)
 			margin-right: 0
+		@media(max-width: 768px)
+			text-align: center
 		.title
 			color: #282828
 			@include fontData(20px, 700, 18px)
@@ -694,6 +744,8 @@ img
 			@include linkHover
 	.back-call
 		margin-bottom: 44px
+		@media(max-width: 768px)
+			padding: 0
 	.geolocation
 		flex-wrap: wrap
 		height: auto
@@ -708,9 +760,25 @@ img
 			transform: unset
 			padding-left: calc(37px + 15px)
 	.form
+		display: flex
+		flex-direction: column
+		&_copyright
+			text-align: end
+			color: #d1d1d1
+			font-family: "GT Eesti Pro Display"
+			font-size: 13px
+			font-weight: 300
+			font-style: normal
+			letter-spacing: normal
+			line-height: 70.62px
+			width: 100%
+			max-width: 375px
+			margin-top: 75px
+			@media(max-width: 768px)
+				display: none
 		margin-top: 20px
 		@media (max-width: 768px)
-			width: 444px
+			width: 451px
 			max-width: 100%
 			margin: 0 0 20px 0
 		@media (max-width: 475px)
@@ -734,12 +802,14 @@ img
 			grid-gap: 11px
 			row-gap: 9px
 			margin-bottom: 23px
-			@media (max-width: 475px)
+			@media (max-width: 500px)
 				display: flex
 				flex-direction: column
 				align-items: center
 			input
-				width: 213px
+				width: 100%
+				min-width: 213px
+				max-width: 330px
 				height: 48px
 				border-radius: 24px
 				border: 1px solid #cdcdcd
@@ -760,6 +830,8 @@ img
 			color: #a6a5a5
 			@media (max-width: 475px)
 				margin: 0 0 20px 0
+				max-width: 330px
+				text-align: center
 		&__btn
 			width: 213px
 			height: 49px

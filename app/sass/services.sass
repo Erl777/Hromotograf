@@ -9,7 +9,6 @@
   min-width: 320px
   position: relative
   line-height: 1.65
-  font-family: $default-font
   overflow-x: hidden
   background-color: #fcfcfc
 
@@ -38,12 +37,14 @@
 
 .asideTitle
   font-size: 37px
-  font-weight: 700
+  font-weight: 800
   line-height: 41px
   color: #212327
   margin-bottom: 50px
   font-family: 'Circe ExtraBold', sans-serif
-
+.services
+  &__container
+    justify-items: center
 .services__asideBlock
   width: calc(21% - 50px)
   margin: 15px 40px 15px 10px
@@ -106,6 +107,7 @@
   text-align: center
   font-size: 17px
   font-family: 'GT Eesti Pro Text', sans-serif
+  font-weight: 300
 
 @media screen and (max-width: 1144px)
   .services__contentWrap
@@ -200,9 +202,11 @@
   display: flex
 
   p
-    font-size: 18px
+    font-size: 20px
     font-weight: 900
     font-family: 'GT Eesti Pro Text', sans-serif
+    width: 100%
+    max-width: 277px
 
   span
     display: block
@@ -262,7 +266,7 @@
     z-index: 1
 
     div
-      margin: 40px 50px 0
+      margin: 40px 50px 40px
 
 .singleService__descriptionWrapper_Button
   box-shadow: -6px 13px 24px rgba(112, 178, 247, 0.28)
@@ -395,6 +399,9 @@
 
 
 .detailedService
+  margin-bottom: 60px
+  @media(max-width: 768px)
+    margin-bottom: 20px
   .detailedService__title
     font-size: 37px
     @media (max-width: 677px)
@@ -448,6 +455,8 @@
         @media (max-width: 991px)
           display: none
       .form
+        display: flex
+        flex-direction: column
         position: relative
         z-index: 1
         margin-top: 20px
