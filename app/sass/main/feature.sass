@@ -50,13 +50,13 @@
         //  padding-top: 136px
   &_btn
     width: 213px
+    height: 49px
 
   &__block
     &_1
-      width: 388px
-      .feature__block_title
-        @media(min-width: 1199px)
-          margin-top: 40px
+      width: 393px
+      .square
+        font-family: 'Poppins Bold',sans-serif
 
     &_2
       width: 394px
@@ -98,21 +98,24 @@
 
     &_title
       width: 100%
-      max-width: 387px
+      max-width: 393px
       color: #212327
       font-family: "Circe - Extra Bold", system-ui
-      font-size: 37px
+      font-size: 34px
       font-weight: 700
       font-style: normal
       letter-spacing: normal
       line-height: 41px
       text-align: left
+      @media(min-width: 1199px)
+        margin-top: 40px
       @media (max-width: 400px)
         max-width: 100%
         font-size: 30px
 
     &_header
       display: flex
+      align-items: center
       width: 100%
       max-width: 368px
       position: relative
@@ -122,7 +125,7 @@
         top: 16px
         left: 8px
         color: #212327
-        font-family: "Montserrat - Extra Bold",sans-serif
+        font-family: "Montserrat ExtraBold",sans-serif
         font-size: 44px
         font-weight: 700
         font-style: normal
@@ -135,7 +138,7 @@
         justify-content: center
         align-items: center
         color: #212327
-        font-family: "Montserrat - Extra Bold", sans-serif
+        font-family: "Montserrat ExtraBold", sans-serif
         font-size: 44px
         font-weight: 700
         font-style: normal
@@ -182,11 +185,15 @@
       margin-left: 23px
 @media(max-width: 1199px)
   .feature
+    &__container
+      padding: 0 5px
     &__block
       &_1
+        margin-right: 10px
         .feature__block_title
           margin-top: 48px
   .feature__about
+    align-items: center
     display: flex
     flex-direction: column
     //flex-wrap: wrap
@@ -210,6 +217,9 @@
     display: none
 
 @media(max-width: 991px)
+  .feature__block
+    &_header
+      margin-bottom: 10px
   .feature__about
     &_col_1
       justify-content: center

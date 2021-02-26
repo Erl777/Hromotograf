@@ -1,4 +1,5 @@
 $(function () {
+    $('.slider__container').slick();
 
     class HromotoPageTabs{
         constructor() {
@@ -271,8 +272,6 @@ $(function () {
 
     renderPage();
 
-    console.log('lol')
-    $('.slider__container').slick();
 
     let $tabs = function (target) {
         let
