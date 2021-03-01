@@ -1,9 +1,9 @@
 @font-face {
 	font-family: 'Montserrat ExtraBold';
-	src: url('/montserrat_extrabold.eot'); /* IE 9 Compatibility Mode */
-	src: url('/montserrat_extrabold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('/montserrat_extrabold.woff2') format('woff2'), /* Super Modern Browsers */
-		url('/montserrat_extrabold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('/montserrat_extrabold.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('/montserrat_extrabold.svg#montserrat_extrabold') format('svg'); /* Chrome < 4, Legacy iOS */
+	src: url('/hromotograf/fonts/Montserrat/montserrat_extrabold.eot'); /* IE 9 Compatibility Mode */
+	src: url('/hromotograf/fonts/Montserrat/montserrat_extrabold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('/hromotograf') format('woff2'), /* Super Modern Browsers */
+		url('/hromotograf/fonts/Montserrat/montserrat_extrabold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('/hromotograf/fonts/Montserrat/montserrat_extrabold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('/hromotograf/fonts/Montserrat/montserrat_extrabold.svg#montserrat_extrabold') format('svg'); /* Chrome < 4, Legacy iOS */
 }
