@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6f8d92b0-478c-4147-adcd-47da4be0a32c" name="art">
+        <fileTransfer rootFolder="/work/www/art-craft.tk/html/hromotograf" accessType="SFTP" host="194.247.179.164" port="2324" sshConfigId="ce645794-31c6-494c-ba8a-9b02080f8b9d" sshConfig="artcraft@194.247.179.164:2324 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
