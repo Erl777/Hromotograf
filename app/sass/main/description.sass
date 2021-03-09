@@ -33,7 +33,15 @@
       background-color: #6baef3
       left: 0
       top: 0
-
+@media(min-width: 476px)
+  .advantage__container
+    .description
+      &__col
+        //display: flex
+        &:nth-child(3)
+          .description__block
+            &:nth-child(4)
+              display: none
 
 @media(max-width: 1200px)
   .description
@@ -50,6 +58,21 @@
         max-width: 294px
 @media(max-width: 475px)
   .description
+    &__col
+      display: flex
+      &:nth-child(2)
+        .description__block
+          &:nth-child(3)
+            display: none
     &__block
       &_text
         margin-bottom: 10px
+
+//.advantage__container
+//  .description
+//    &__col
+//      display: flex
+//      &:nth-child(2)
+//        .description__block
+//          &:nth-child(3)
+//            display: none

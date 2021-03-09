@@ -12,18 +12,14 @@
       display: flex
       justify-content: space-between
       .feature__block_header
-        &:last-child
-          p
-            margin-left: 20px
+        p
+          margin-left: 20px
       div
         & .square
           background-color: #e3f0fd !important
-
-        &:last-child
-          & .square
-            margin-right: 38px
-            width: 100%
-            max-width: 77px
+          margin-right: 38px
+          width: 100%
+          max-width: 77px
 
     &_col
       &_1
@@ -126,7 +122,7 @@
 
       span
         position: absolute
-        top: 16px
+        top: 14px
         left: 8px
         color: #212327
         font-family: "Montserrat ExtraBold",sans-serif
@@ -206,9 +202,8 @@
       max-width: 860px
       margin: 0 auto
       .feature__block_header
-        &:last-child
-          p
-            margin-left: 20px
+        p
+          margin-left: 20px
     &_col_1
       display: flex
       flex-wrap: wrap
@@ -246,6 +241,8 @@
     &_1
       width: 100%
       max-width: 388px
+      margin-right: 0
+      text-align: center
     &_2
       width: 100%
       max-width: 394px
@@ -253,6 +250,34 @@
       .square
         width: 100%
         max-width: 77px
+    &_action
+      display: none
+    &_title
+      padding: 0 10px
+      text-align: center
+    &_text
+      text-align: center
+      margin-bottom: 70px
+
+  .feature
+    &_btn
+      display: none
+    &__about
+      &_col_1
+        text-align: center
+      &_col_2
+        display: none
+      //.background
+      //  width: 100vw
+      //  display: block
+    &__container
+      padding: 0 22px
+
 @media(max-width: 425px)
-  .feature__container
-    padding: 0 10px
+  .feature__block_1
+    .feature__block_header
+      justify-content: center
+      p
+        max-width: 155px
+  //.feature__container
+  //  padding: 0 10px

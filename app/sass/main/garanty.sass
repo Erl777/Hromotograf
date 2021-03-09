@@ -76,14 +76,24 @@
   .garanty
     &__background
       padding: 28px 20px 28px 20px
+
+@media(max-width: 475px)
+  .garanty
+    &__background
+      *
+        text-align: center !important
+    &_img
+      margin-top: 22px
+    &__container
+      flex-direction: column-reverse
 @media(max-width: 450px)
   .garanty
     &_actions
       flex-direction: column
       &_text
         width: 100%
-        margin-left: 0
-        margin-top: 10px
+        max-width: 161px
+        margin: 10px auto 0 auto
         text-align: center
     &_img
       padding: 0 10px

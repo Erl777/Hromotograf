@@ -1,5 +1,7 @@
 .client
   &_list
+    &-mobile
+      display: none
     display: flex
     width: 589px
     //flex-direction: column
@@ -119,7 +121,34 @@
       //  img
       //    &:last-child
       //      margin-top: 0 !important
-
+@media(max-width: 475px)
+  .client_list
+    display: none
+    &-mobile
+      display: flex
+      flex-wrap: wrap
+      div
+        width: 100%
+        display: flex
+        justify-content: space-around
+        align-items: center
+        flex-wrap: wrap
+        &:nth-child(2)
+          margin-bottom: 46px
+          margin-top: 29px
+        &:nth-child(3)
+          img:nth-child(1)
+            margin-bottom: 39px
+          //max-height: 132px
+          //height: 100%
+        img
+          margin-top: 0 !important
+  .client_list_about
+    margin-right: 0
+    text-align: center
+    & .quality_block
+    &_text
+      text-align: center
 @media(max-width: 450px)
   .client_list
     &__container

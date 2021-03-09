@@ -3,6 +3,7 @@
     display: flex
     align-items: center
     margin: 67px 0 80px 0
+
   &_square
     position: absolute
     background-color: #6baef3
@@ -11,6 +12,8 @@
   &__blocks
     display: flex
     margin: 0 29px 0 39px
+    & div:nth-child(1) > .feature__block_header
+      display: none
     & .description__block
       width: 100%
       max-width: 326px
@@ -120,6 +123,49 @@
           margin-top: 15px
     &__blocks
       flex-direction: column-reverse
+
+@media(max-width: 475px)
+  .solve
+    &__background
+      padding: 15px
+      img
+        display: block
+        max-width: 193px
+        top: 174px
+        right: -31px
+      &_text
+        &-block
+          padding-left: 0
+        &-title
+          padding: 26px 0 0 18px
+        &-about
+          max-width: 163px
+          margin-left: 22px
+          font-size: 14px
+    &__container
+      margin-top: 47px
+      padding: 0
+    &__blocks
+      display: flex
+      div
+        &:nth-child(1)
+          margin-right: 0
+          order: 1
+          .card_btn
+            display: none
+          .feature__block_header
+            flex-direction: row-reverse
+            margin: 40px 0
+            .square
+              margin-right: 20px
+              background-color: #e3f0fd !important
+        &:nth-child(2)
+          .description__block
+            .feature__block_header
+              display: none
+      //flex-direction: column
+      padding: 0 22px
+      margin-top: 115px
 @media(max-width: 375px)
   .solve__background_text-title
     font-size: 28px

@@ -63,6 +63,18 @@
     &__container
       height: initial
       padding-bottom: 30px
+@media(max-width: 475px)
+  .license
+    &__container
+      display: flex
+      flex-direction: column
+    &_text
+      width: 100%
+    &_img
+      position: initial
+      img
+        position: initial
+      //display: none
 @media(max-width: 400px)
   .license
     &_text_title
@@ -70,9 +82,9 @@
     &_action
       p
         font-size: 13px
-    &_img
-      img
-        position: absolute
-        top: 37%
+    //&_img
+    //  img
+    //    position: absolute
+    //    top: 37%
     &_text
       padding: 20px
