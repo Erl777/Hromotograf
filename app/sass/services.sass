@@ -2,8 +2,8 @@
 @import "libs"
 @import "vars"
 
-
-
+.detailedService__title
+  margin-top: 0
 .container__singleService, .container__allServices, .detailedService
   font-size: 16px
   min-width: 320px
@@ -207,6 +207,9 @@
     font-family: 'GT Eesti Pro Text', sans-serif
     width: 100%
     max-width: 277px
+    line-height: initial
+    display: flex
+    align-items: center
 
   span
     display: block
@@ -461,7 +464,8 @@
         z-index: 1
         margin-top: 20px
         margin-left: 50px
-
+        height: fit-content
+        margin-top: 50px
         @media (max-width: 911px)
           margin: 0 auto 20px auto
         @media (max-width: 475px)
@@ -471,6 +475,7 @@
           @include fontData(32px, 600, 32px)
           color: #212327
           max-width: 100%
+          font-family: "Circe - Extra Bold", system-ui
           // 360px
           margin: 0 0 25px 18px
 
@@ -479,6 +484,7 @@
             margin: 0 0 25px 0
             text-align: center
           @media (max-width: 475px)
+            margin-top: 20px
             @include fontData(26px, 400, 30px)
 
         &__container
@@ -553,3 +559,16 @@
             font-weight: 700
             font-family: 'GT Eesti Pro Text',sans-serif
             color: #212327
+
+
+@media(max-width: 475px)
+  .singleService__footerIcon__single
+    flex-direction: row !important
+    &:first-child
+      span
+        //margin-right: 50px
+  .breadcrumbs
+    display: flex !important
+    flex-direction: column !important
+    height: auto !important
+    margin-bottom: 20px !important

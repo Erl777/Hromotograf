@@ -439,7 +439,7 @@ img
 
 .sales-department
 	display: flex
-	margin-bottom: 70px
+	margin-bottom: 0 !important
 	@media (max-width: 768px)
 		flex-direction: column
 	&__sidebar
@@ -481,6 +481,10 @@ img
 		@media (max-width: 900px)
 			grid-template-columns: repeat(2, 1fr)
 			grid-template-rows: repeat(3, 1fr)
+		@media(max-width: 500px)
+			.card:last-child
+				height: fit-content
+				margin-bottom: 30px !important
 		@media (max-width: 475px)
 			display: flex
 			//grid-template-columns: repeat(1, 1fr)
