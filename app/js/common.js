@@ -1,7 +1,8 @@
+$(function(){
+    if($('.slider__container').slick())
+        $('.slider__container').slick();
+})
 $(function () {
-    // if($('.slider__container').slick())
-    //     $('.slider__container').slick();
-    console.log('hello')
     class HromotoPageTabs{
         constructor() {
             this.tabButtons = document.querySelectorAll('.js-tab');
