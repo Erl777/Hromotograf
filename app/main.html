@@ -10,8 +10,24 @@
     <link rel="stylesheet" href="fonts/Montserrat/montserrat_extrabold.css">
     <link rel="stylesheet" href="fonts/CirceExtraBold/circe_extrabold.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mainbtn.css">
 </head>
 <body>
+    
+<style>
+
+
+/* Hover Slider Arrow */
+
+.slick-next-arrows:hover {
+    box-shadow: 0 0 25px #3b94f3; /* Параметры тени */
+    border-radius: 80%;
+    transition: ease-in-out 0.2s;
+}
+
+</style>
+
+
 <header class="header container main__header">
     <a href="/">
         <img src="img/logo.png" alt="logo" class="logo">
@@ -389,7 +405,7 @@
                         производительность</b>
                         лаборатории с минимизацией текущих затрат на обслуживание приборов.
                     </p>
-                    <button class="card_btn advantage__block_btn">Оставить заявку</button>
+                    <button class="card_btn advantage__block_btn reuqst">Оставить заявку</button>
                 </div>
                 <div class="description__block">
                     <div class="description__block_band"></div>
@@ -509,10 +525,25 @@
                 <p class="block__about_action">
                     Посмотреть следующий отзыв клиента
                 </p>
-                <img src="img/right-arrow.png" alt="">
-            </div>
+               
+                
+
+              
+                <a style="position: realtive; cursor: pointer;" class="slick-next-arrows" aria-label="Next"><img src="img/right-arrow.png"></a>
+               
+            
+
+
+                </div>
+
+            
+            
+
+
             <div class="slider__container" style="min-width: 0;max-width: 100%">
+               
                 <div class="letter__container">
+                    <button style="color: red;" class="slick-next" aria-label="Next" type="button">Next</button>
                     <div class="letter_img__container">
                         <img src="./img/Письмо.png" alt="" class="letter_img">
                         <p class="letter_title">Установка газового хроматографа Agilent 7890B</p>
@@ -522,7 +553,8 @@
                             625001, г.Тюмень, ул. Мельзаводская, 18 в
                             ПАО “Запсибкомбанк” г.Тюмень</p>
                         <div class="letter_text">
-                            <p class="letter_text_to">Директору ООО “Экоприбор-Сервис”</p>
+                            <p class="letter_text_to">
+                            Директору ООО “Экоприбор-Сервис”</p>
                             2--21.03.2019 г. в рамках договора №33/2019 от 14.02.2019 г. сотрудник ООО “Экоприбор-Сервис” инженер Краснобородов П.А. выполнил работы по
                             техническому
                             обслуживанию, ремонтуи подготовки к проверке комплексов хроматогрофического оборудования. Услуга по догвору оказана качественно, оперативно,
@@ -539,6 +571,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="letter__container">
                     <div class="letter_img__container">
                         <img src="./img/Письмо.png" alt="" class="letter_img">
@@ -672,8 +705,30 @@
 
     </div>
 </footer>
-<script src="js/scripts.min.js"></script>
+
+
+
+
+
+<!-- <script src="js/scripts.min.js"></script> -->
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="js/slick/slick.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.slider__container').slick({
+        autoplay: true,
+        arrows: true,
+        nextArrow: document.querySelector('.slick-next-arrows'),
+      });
+    });
+
+   
+  </script>
+
+
 </body>
 </html>

@@ -5,9 +5,37 @@
     <title>Старница статьи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/main.min.css">
+
+	<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/mainbtn.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
+
+<style>
+    /* Reset Card-Slider Shadow */
+
+.card {
+    box-shadow: none; background-color: none;
+}
+
+
+/* Hover Slider Arrow */
+.slick-next-arrows {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition: transform .5s ease-in-out;
+}
+.slick-next-arrows:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+
+}
+
+
+
+</style>
+
 <body class="article-page">
 <header class="header container main__header">
     <a href="/">
@@ -190,41 +218,135 @@
                 <div class="article_action_block">
                     <button class="card_btn" style="width: 197px">Смотреть все статьи</button>
                     <p>Рекомендуем прочитать</p>
-                    <img src="img/right-arrow.png" alt="">
+                    <a style="position: realtive; cursor: pointer;" class="slick-next-arrows" aria-label="Next"><img src="img/right-arrow.png"></a>
                 </div>
-                <div class="card card__article">
-                    <img src="img/article_chromot.png" alt="">
-                    <p class="card__article_title">Распространённые причины
-                        поломки хроматографа</p>
-                    <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
-                    <p class="card__article_date">
-                        <img src="img/calendar.png" alt="">
-                        <span>06.09.2020</span>
-                    </p>
-                    <button class="card_btn card__article_btn">Читать далее</button>
+
+
+                <div class="slider__container" style="min-width: 0;max-width:70%;">
+                  
+                       <div class="card__slide" style="display: flex; flex-direction: row;">
+                        <div class="card card__article" >
+                            <img src="img/article_chromot.png" alt="">
+                            <p class="card__article_title">Распространённые причины
+                                поломки хроматографа</p>
+                            <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
+                            <p class="card__article_date">
+                                <img src="img/calendar.png" alt="">
+                                <span>06.09.2020</span>
+                            </p>
+                            <button class="card_btn card__article_btn">Читать далее</button>
+                        </div>
+        
+        
+                        <div class="card card__article" >
+                            <img src="img/Слой_16.png" alt="">
+                            <p class="card__article_title">Распространённые причины
+                                поломки хроматографа</p>
+                            <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
+                            <p class="card__article_date">
+                                <img src="img/calendar.png" alt="">
+                                <span>06.09.2020</span>
+                            </p>
+                            <button class="card_btn card__article_btn">Читать далее</button>
+                        </div>
+                        <div class="card card__article" >
+                            <img src="img/Слой_16.png" alt="">
+                            <p class="card__article_title">Распространённые причины
+                                поломки хроматографа</p>
+                            <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
+                            <p class="card__article_date">
+                                <img src="img/calendar.png" alt="">
+                                <span>06.09.2020</span>
+                            </p>
+                            <button class="card_btn card__article_btn">Читать далее</button>
+                        </div>
+                       </div>
+
+                       <div class="card__slide" style="display: flex; flex-direction: row; ">
+                        <div class="card card__article">
+                            <img src="img/article_chromot.png" alt="">
+                            <p class="card__article_title">Распространённые причины
+                                поломки хроматографа</p>
+                            <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
+                            <p class="card__article_date">
+                                <img src="img/calendar.png" alt="">
+                                <span>06.09.2020</span>
+                            </p>
+                            <button class="card_btn card__article_btn">Читать далее</button>
+                        </div>
+        
+        
+                        <div class="card card__article">
+                            <img src="img/Слой_16.png" alt="">
+                            <p class="card__article_title">Распространённые причины
+                                поломки хроматографа</p>
+                            <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
+                            <p class="card__article_date">
+                                <img src="img/calendar.png" alt="">
+                                <span>06.09.2020</span>
+                            </p>
+                            <button class="card_btn card__article_btn">Читать далее</button>
+                        </div>
+                        <div class="card card__article">
+                            <img src="img/Слой_16.png" alt="">
+                            <p class="card__article_title">Распространённые причины
+                                поломки хроматографа</p>
+                            <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
+                            <p class="card__article_date">
+                                <img src="img/calendar.png" alt="">
+                                <span>06.09.2020</span>
+                            </p>
+                            <button class="card_btn card__article_btn">Читать далее</button>
+                        </div>
+                       </div>
+
+                       <div class="card__slide" style="display: flex; flex-direction: row; ">
+                        <div class="card card__article">
+                            <img src="img/article_chromot.png" alt="">
+                            <p class="card__article_title">Распространённые причины
+                                поломки хроматографа</p>
+                            <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
+                            <p class="card__article_date">
+                                <img src="img/calendar.png" alt="">
+                                <span>06.09.2020</span>
+                            </p>
+                            <button class="card_btn card__article_btn">Читать далее</button>
+                        </div>
+        
+        
+                        <div class="card card__article">
+                            <img src="img/Слой_16.png" alt="">
+                            <p class="card__article_title">Распространённые причины
+                                поломки хроматографа</p>
+                            <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
+                            <p class="card__article_date">
+                                <img src="img/calendar.png" alt="">
+                                <span>06.09.2020</span>
+                            </p>
+                            <button class="card_btn card__article_btn">Читать далее</button>
+                        </div>
+                        <div class="card card__article">
+                            <img src="img/Слой_16.png" alt="">
+                            <p class="card__article_title">Распространённые причины
+                                поломки хроматографа</p>
+                            <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
+                            <p class="card__article_date">
+                                <img src="img/calendar.png" alt="">
+                                <span>06.09.2020</span>
+                            </p>
+                            <button class="card_btn card__article_btn">Читать далее</button>
+                        </div>
+                       </div>
+                       
+                    
+                   
                 </div>
-                <div class="card card__article">
-                    <img src="img/Слой_16.png" alt="">
-                    <p class="card__article_title">Распространённые причины
-                        поломки хроматографа</p>
-                    <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
-                    <p class="card__article_date">
-                        <img src="img/calendar.png" alt="">
-                        <span>06.09.2020</span>
-                    </p>
-                    <button class="card_btn card__article_btn">Читать далее</button>
-                </div>
-                <div class="card card__article">
-                    <img src="img/Слой_16.png" alt="">
-                    <p class="card__article_title">Распространённые причины
-                        поломки хроматографа</p>
-                    <p class="card__article_text">Криминалистические экспертизы играют важную роль при раскрытии различных дел, возникающих в следственной и судебной практике. </p>
-                    <p class="card__article_date">
-                        <img src="img/calendar.png" alt="">
-                        <span>06.09.2020</span>
-                    </p>
-                    <button class="card_btn card__article_btn">Читать далее</button>
-                </div>
+
+
+                
+                
+
+
             </div>
         </div>
     </div>
@@ -329,5 +451,26 @@
 
     </div>
 </footer>
+
+
+
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="js/slick/slick.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.slider__container').slick({
+        autoplay: false,
+        arrows: true,
+        nextArrow: document.querySelector('.slick-next-arrows'),
+      });
+    });
+
+    
+  </script>
+
 </body>
 </html>

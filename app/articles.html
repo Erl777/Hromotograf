@@ -13,6 +13,7 @@
 
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/mainbtn.css">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
@@ -90,8 +91,10 @@
 	</div>
 	<div class='article-list' id='slider'>
 	</div>
-
 </div>
+
+
+
 	<footer class="footer">
 
 	<div class="footer-bg"></div>
@@ -192,7 +195,26 @@
 
 	</div>
 </footer>
-	<script src="js/scripts.min.js"></script>
+	<!-- <script src="js/scripts.min.js"></script> -->
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="js/slick/slick.min.js"></script>
+	
+	
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $('.slider__container').slick({
+			autoplay: true,
+			arrows: true,
+			nextArrow: document.querySelector('.slick-next-arrows'),
+		  });
+		});
+	
+		
+	  </script>
+
 
 </body>
 </html>

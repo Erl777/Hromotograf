@@ -2,8 +2,8 @@
 	font-family: 'Circe - Extra Bold';
 	src: url('circe_extrabold.eot'); /* IE 9 Compatibility Mode */
 	src: url('circe_extrabold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-	url('circe_extrabold.woff2') format('woff2'), /* Super Modern Browsers */
-	url('circe_extrabold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-	url('circe_extrabold.ttf') format('truetype'), /* Safari, Android, iOS */
-	url('circe_extrabold.svg#circe_extrabold') format('svg'); /* Chrome < 4, Legacy iOS */
+		url('circe_extrabold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('circe_extrabold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('circe_extrabold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('circe_extrabold.svg#circe_extrabold') format('svg'); /* Chrome < 4, Legacy iOS */
 }

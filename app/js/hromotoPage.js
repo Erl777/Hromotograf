@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
+  
+
+
     class HromotoPageTabs{
         constructor() {
             this.tabButtons = document.querySelectorAll('.js-tab');
@@ -37,3 +40,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
     new HromotoPageTabs();
 
 });
+
+
